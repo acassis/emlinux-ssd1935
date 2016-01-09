@@ -1,0 +1,135 @@
+/* ------------------------------------------------------------------
+ * Copyright (C) 2009 U-Media
+ *
+ * Licensed under the Apache License, Version 2.0 (the "License");
+ * you may not use this file except in compliance with the License.
+ * You may obtain a copy of the License at
+ *
+ *      http://www.apache.org/licenses/LICENSE-2.0
+ *
+ * Unless required by applicable law or agreed to in writing, software
+ * distributed under the License is distributed on an "AS IS" BASIS,
+ * WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either
+ * express or implied.
+ * See the License for the specific language governing permissions
+ * and limitations under the License.
+ * -------------------------------------------------------------------
+ */
+
+/* The include file for the codec class */
+///#include "pvmp3_decoder.h"
+#include "pvmp3_audio_type_defs.h"
+
+
+int testpvmp3_normalize(int x)
+{
+    /*----------------------------------------------------------------------------
+    ; Define all local variables
+    ----------------------------------------------------------------------------*/
+    int i;
+
+
+    if (x > 0x0FFFFFFF)
+    {
+        i = 0;  /* most likely case */
+    }
+    else if (x > 0x00FFFFFF)
+    {
+        i = 3;  /* second most likely case */
+    }
+    else if (x > 0x0000FFFF)
+    {
+        i  = x > 0x000FFFFF ?  7 :  11;
+    }
+    else
+    {
+        if (x > 0x000000FF)
+        {
+            i  = x > 0x00000FFF ?  15 :  19;
+        }
+        else
+        {
+            i  = x > 0x0000000F ?  23 :  27;
+        }
+    }
+
+
+    x <<= i;
+
+    switch (x & 0x78000000)
+    {
+        case 0x08000000:
+            i += 3;
+            break;
+
+        case 0x18000000:
+        case 0x10000000:
+            i += 2;
+            break;
+        case 0x28000000:
+        case 0x20000000:
+        case 0x38000000:
+        case 0x30000000:
+            i++;
+
+        default:
+            ;
+    }
+
+    return i;
+
+}
+
+#if 0
+void *PVMP3DecoderInit(void)
+{
+	CPvMP3_Decoder *dec = new CPvMP3_Decoder;
+	if (dec != NULL) dec->ConstructL();
+	return dec;
+}
+
+void PVMP3DecoderFinalize(void *dec)
+{
+	if (dec != NULL) delete ((CPvMP3_Decoder *)dec);
+}
+
+int PVMP3DecoderStartL(void* pExt,
+        int aAllocateInputBuffer,
+        int aAllocateOutputBuffer,
+        int crcEnabler,
+        int equalizType)
+{
+	return ((CPvMP3_Decoder *)pExt)->StartL(
+				(tPVMP3DecoderExternal *)pExt, 
+				(bool)aAllocateInputBuffer, 
+				(bool)aAllocateOutputBuffer, 
+				(bool)crcEnabler, 
+				(e_equalization) equalizType);
+}
+
+int PVMP3DecoderExecuteL(void* pExt)
+{
+	return ((CPvMP3_Decoder *)pExt)->ExecuteL((tPVMP3DecoderExternal *)pExt);
+}
+
+void PVMP3DecoderStopL(void* pExt)
+{
+	((CPvMP3_Decoder *)pExt)->StopL();
+}
+
+void PVMP3DecoderResetDecoderL(void* pExt)
+{
+	((CPvMP3_Decoder *)pExt)->ResetDecoderL();
+}
+
+void PVMP3DecoderTerminateDecoderL(void* pExt)
+{
+	((CPvMP3_Decoder *)pExt)->TerminateDecoderL();
+}
+
+int PVMP3DecoderSeekMp3Synchronization(void* pExt)
+{
+	return ((CPvMP3_Decoder *)pExt)->SeekMp3Synchronization((tPVMP3DecoderExternal *)pExt);
+}
+#endif
+

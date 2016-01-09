@@ -1,0 +1,17 @@
+SECTIONS
+{
+	. = 0xffff2000;
+	.text	:	{ *(start) *(.text) }
+	.rodata	:	{ *(.rodata) }
+	.dummy  : {}
+	erom = ALIGN(4);
+
+	.data 	:	AT (erom) { sdata = .; *(.data) edata = .; }
+
+	bss_start = ALIGN(4);
+	.bss	:	{ *(.bss) }
+	bss_end = .;
+
+	. = 0xfffffffc;
+	stack = .;
+}

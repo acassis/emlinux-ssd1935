@@ -1,0 +1,214 @@
+hw_default.o: ../../daemons/hw_default.c ../config.h \
+  /projects/CirrusEP93xx/emlinux-ep93xx/libs/gpl/uClibc/include/stdio.h \
+  /projects/CirrusEP93xx/emlinux-ep93xx/libs/gpl/uClibc/include/features.h \
+  /projects/CirrusEP93xx/emlinux-ep93xx/libs/gpl/uClibc/include/bits/uClibc_config.h \
+  /projects/CirrusEP93xx/emlinux-ep93xx/libs/gpl/uClibc/include/sys/cdefs.h \
+  /opt/toolchain_arm_ep93xx/lib/gcc/arm-linux-uclibc/3.4.2/include/stddef.h \
+  /projects/CirrusEP93xx/emlinux-ep93xx/libs/gpl/uClibc/include/bits/types.h \
+  /projects/CirrusEP93xx/emlinux-ep93xx/libs/gpl/uClibc/include/bits/kernel_types.h \
+  /projects/CirrusEP93xx/emlinux-ep93xx/libs/gpl/uClibc/include/bits/pthreadtypes.h \
+  /projects/CirrusEP93xx/emlinux-ep93xx/libs/gpl/uClibc/include/bits/sched.h \
+  /projects/CirrusEP93xx/emlinux-ep93xx/libs/gpl/uClibc/include/bits/uClibc_stdio.h \
+  /projects/CirrusEP93xx/emlinux-ep93xx/libs/gpl/uClibc/include/wchar.h \
+  /projects/CirrusEP93xx/emlinux-ep93xx/libs/gpl/uClibc/include/bits/wchar.h \
+  /opt/toolchain_arm_ep93xx/lib/gcc/arm-linux-uclibc/3.4.2/include/stdarg.h \
+  /projects/CirrusEP93xx/emlinux-ep93xx/libs/gpl/uClibc/include/bits/stdio_lim.h \
+  /projects/CirrusEP93xx/emlinux-ep93xx/libs/gpl/uClibc/include/stdlib.h \
+  /projects/CirrusEP93xx/emlinux-ep93xx/libs/gpl/uClibc/include/sys/types.h \
+  /projects/CirrusEP93xx/emlinux-ep93xx/libs/gpl/uClibc/include/time.h \
+  /projects/CirrusEP93xx/emlinux-ep93xx/libs/gpl/uClibc/include/endian.h \
+  /projects/CirrusEP93xx/emlinux-ep93xx/libs/gpl/uClibc/include/bits/endian.h \
+  /projects/CirrusEP93xx/emlinux-ep93xx/libs/gpl/uClibc/include/sys/select.h \
+  /projects/CirrusEP93xx/emlinux-ep93xx/libs/gpl/uClibc/include/bits/select.h \
+  /projects/CirrusEP93xx/emlinux-ep93xx/libs/gpl/uClibc/include/bits/sigset.h \
+  /projects/CirrusEP93xx/emlinux-ep93xx/libs/gpl/uClibc/include/bits/time.h \
+  /projects/CirrusEP93xx/emlinux-ep93xx/libs/gpl/uClibc/include/sys/sysmacros.h \
+  /projects/CirrusEP93xx/emlinux-ep93xx/libs/gpl/uClibc/include/alloca.h \
+  /projects/CirrusEP93xx/emlinux-ep93xx/libs/gpl/uClibc/include/fcntl.h \
+  /projects/CirrusEP93xx/emlinux-ep93xx/libs/gpl/uClibc/include/bits/fcntl.h \
+  /projects/CirrusEP93xx/emlinux-ep93xx/libs/gpl/uClibc/include/unistd.h \
+  /projects/CirrusEP93xx/emlinux-ep93xx/libs/gpl/uClibc/include/bits/posix_opt.h \
+  /projects/CirrusEP93xx/emlinux-ep93xx/libs/gpl/uClibc/include/bits/confname.h \
+  /projects/CirrusEP93xx/emlinux-ep93xx/libs/gpl/uClibc/include/bits/getopt.h \
+  /projects/CirrusEP93xx/emlinux-ep93xx/libs/gpl/uClibc/include/limits.h \
+  /opt/toolchain_arm_ep93xx/lib/gcc/arm-linux-uclibc/3.4.2/include/limits.h \
+  /projects/CirrusEP93xx/emlinux-ep93xx/libs/gpl/uClibc/include/bits/posix1_lim.h \
+  /projects/CirrusEP93xx/emlinux-ep93xx/libs/gpl/uClibc/include/bits/local_lim.h \
+  /projects/CirrusEP93xx/emlinux-ep93xx/libs/gpl/uClibc/include/linux/limits.h \
+  /projects/CirrusEP93xx/emlinux-ep93xx/libs/gpl/uClibc/include/bits/posix2_lim.h \
+  /projects/CirrusEP93xx/emlinux-ep93xx/libs/gpl/uClibc/include/signal.h \
+  /projects/CirrusEP93xx/emlinux-ep93xx/libs/gpl/uClibc/include/bits/signum.h \
+  /projects/CirrusEP93xx/emlinux-ep93xx/libs/gpl/uClibc/include/bits/siginfo.h \
+  /projects/CirrusEP93xx/emlinux-ep93xx/libs/gpl/uClibc/include/bits/wordsize.h \
+  /projects/CirrusEP93xx/emlinux-ep93xx/libs/gpl/uClibc/include/bits/sigaction.h \
+  /projects/CirrusEP93xx/emlinux-ep93xx/libs/gpl/uClibc/include/bits/sigcontext.h \
+  /projects/CirrusEP93xx/emlinux-ep93xx/libs/gpl/uClibc/include/asm/sigcontext.h \
+  /projects/CirrusEP93xx/emlinux-ep93xx/libs/gpl/uClibc/include/bits/sigstack.h \
+  /projects/CirrusEP93xx/emlinux-ep93xx/libs/gpl/uClibc/include/bits/sigthread.h \
+  /projects/CirrusEP93xx/emlinux-ep93xx/libs/gpl/uClibc/include/sys/stat.h \
+  /projects/CirrusEP93xx/emlinux-ep93xx/libs/gpl/uClibc/include/bits/stat.h \
+  /projects/CirrusEP93xx/emlinux-ep93xx/libs/gpl/uClibc/include/sys/ioctl.h \
+  /projects/CirrusEP93xx/emlinux-ep93xx/libs/gpl/uClibc/include/bits/ioctls.h \
+  /projects/CirrusEP93xx/emlinux-ep93xx/libs/gpl/uClibc/include/asm/ioctls.h \
+  /projects/CirrusEP93xx/emlinux-ep93xx/libs/gpl/uClibc/include/asm/ioctl.h \
+  /projects/CirrusEP93xx/emlinux-ep93xx/libs/gpl/uClibc/include/bits/ioctl-types.h \
+  /projects/CirrusEP93xx/emlinux-ep93xx/libs/gpl/uClibc/include/sys/ttydefaults.h \
+  ../../daemons/hardware.h ../../drivers/lirc.h \
+  /projects/CirrusEP93xx/emlinux-ep93xx/libs/gpl/uClibc/include/asm/types.h \
+  /projects/CirrusEP93xx/emlinux-ep93xx/libs/gpl/uClibc/include/linux/ioctl.h \
+  ../../daemons/ir_remote.h \
+  /projects/CirrusEP93xx/emlinux-ep93xx/libs/gpl/uClibc/include/sys/time.h \
+  /projects/CirrusEP93xx/emlinux-ep93xx/libs/gpl/uClibc/include/string.h \
+  /projects/CirrusEP93xx/emlinux-ep93xx/libs/gpl/uClibc/include/math.h \
+  /projects/CirrusEP93xx/emlinux-ep93xx/libs/gpl/uClibc/include/bits/huge_val.h \
+  /projects/CirrusEP93xx/emlinux-ep93xx/libs/gpl/uClibc/include/bits/mathdef.h \
+  /projects/CirrusEP93xx/emlinux-ep93xx/libs/gpl/uClibc/include/bits/mathcalls.h \
+  ../../daemons/lircd.h \
+  /projects/CirrusEP93xx/emlinux-ep93xx/libs/gpl/uClibc/include/syslog.h \
+  /projects/CirrusEP93xx/emlinux-ep93xx/libs/gpl/uClibc/include/sys/syslog.h \
+  ../../daemons/receive.h ../../daemons/transmit.h \
+  ../../daemons/hw_default.h
+
+../config.h:
+
+/projects/CirrusEP93xx/emlinux-ep93xx/libs/gpl/uClibc/include/stdio.h:
+
+/projects/CirrusEP93xx/emlinux-ep93xx/libs/gpl/uClibc/include/features.h:
+
+/projects/CirrusEP93xx/emlinux-ep93xx/libs/gpl/uClibc/include/bits/uClibc_config.h:
+
+/projects/CirrusEP93xx/emlinux-ep93xx/libs/gpl/uClibc/include/sys/cdefs.h:
+
+/opt/toolchain_arm_ep93xx/lib/gcc/arm-linux-uclibc/3.4.2/include/stddef.h:
+
+/projects/CirrusEP93xx/emlinux-ep93xx/libs/gpl/uClibc/include/bits/types.h:
+
+/projects/CirrusEP93xx/emlinux-ep93xx/libs/gpl/uClibc/include/bits/kernel_types.h:
+
+/projects/CirrusEP93xx/emlinux-ep93xx/libs/gpl/uClibc/include/bits/pthreadtypes.h:
+
+/projects/CirrusEP93xx/emlinux-ep93xx/libs/gpl/uClibc/include/bits/sched.h:
+
+/projects/CirrusEP93xx/emlinux-ep93xx/libs/gpl/uClibc/include/bits/uClibc_stdio.h:
+
+/projects/CirrusEP93xx/emlinux-ep93xx/libs/gpl/uClibc/include/wchar.h:
+
+/projects/CirrusEP93xx/emlinux-ep93xx/libs/gpl/uClibc/include/bits/wchar.h:
+
+/opt/toolchain_arm_ep93xx/lib/gcc/arm-linux-uclibc/3.4.2/include/stdarg.h:
+
+/projects/CirrusEP93xx/emlinux-ep93xx/libs/gpl/uClibc/include/bits/stdio_lim.h:
+
+/projects/CirrusEP93xx/emlinux-ep93xx/libs/gpl/uClibc/include/stdlib.h:
+
+/projects/CirrusEP93xx/emlinux-ep93xx/libs/gpl/uClibc/include/sys/types.h:
+
+/projects/CirrusEP93xx/emlinux-ep93xx/libs/gpl/uClibc/include/time.h:
+
+/projects/CirrusEP93xx/emlinux-ep93xx/libs/gpl/uClibc/include/endian.h:
+
+/projects/CirrusEP93xx/emlinux-ep93xx/libs/gpl/uClibc/include/bits/endian.h:
+
+/projects/CirrusEP93xx/emlinux-ep93xx/libs/gpl/uClibc/include/sys/select.h:
+
+/projects/CirrusEP93xx/emlinux-ep93xx/libs/gpl/uClibc/include/bits/select.h:
+
+/projects/CirrusEP93xx/emlinux-ep93xx/libs/gpl/uClibc/include/bits/sigset.h:
+
+/projects/CirrusEP93xx/emlinux-ep93xx/libs/gpl/uClibc/include/bits/time.h:
+
+/projects/CirrusEP93xx/emlinux-ep93xx/libs/gpl/uClibc/include/sys/sysmacros.h:
+
+/projects/CirrusEP93xx/emlinux-ep93xx/libs/gpl/uClibc/include/alloca.h:
+
+/projects/CirrusEP93xx/emlinux-ep93xx/libs/gpl/uClibc/include/fcntl.h:
+
+/projects/CirrusEP93xx/emlinux-ep93xx/libs/gpl/uClibc/include/bits/fcntl.h:
+
+/projects/CirrusEP93xx/emlinux-ep93xx/libs/gpl/uClibc/include/unistd.h:
+
+/projects/CirrusEP93xx/emlinux-ep93xx/libs/gpl/uClibc/include/bits/posix_opt.h:
+
+/projects/CirrusEP93xx/emlinux-ep93xx/libs/gpl/uClibc/include/bits/confname.h:
+
+/projects/CirrusEP93xx/emlinux-ep93xx/libs/gpl/uClibc/include/bits/getopt.h:
+
+/projects/CirrusEP93xx/emlinux-ep93xx/libs/gpl/uClibc/include/limits.h:
+
+/opt/toolchain_arm_ep93xx/lib/gcc/arm-linux-uclibc/3.4.2/include/limits.h:
+
+/projects/CirrusEP93xx/emlinux-ep93xx/libs/gpl/uClibc/include/bits/posix1_lim.h:
+
+/projects/CirrusEP93xx/emlinux-ep93xx/libs/gpl/uClibc/include/bits/local_lim.h:
+
+/projects/CirrusEP93xx/emlinux-ep93xx/libs/gpl/uClibc/include/linux/limits.h:
+
+/projects/CirrusEP93xx/emlinux-ep93xx/libs/gpl/uClibc/include/bits/posix2_lim.h:
+
+/projects/CirrusEP93xx/emlinux-ep93xx/libs/gpl/uClibc/include/signal.h:
+
+/projects/CirrusEP93xx/emlinux-ep93xx/libs/gpl/uClibc/include/bits/signum.h:
+
+/projects/CirrusEP93xx/emlinux-ep93xx/libs/gpl/uClibc/include/bits/siginfo.h:
+
+/projects/CirrusEP93xx/emlinux-ep93xx/libs/gpl/uClibc/include/bits/wordsize.h:
+
+/projects/CirrusEP93xx/emlinux-ep93xx/libs/gpl/uClibc/include/bits/sigaction.h:
+
+/projects/CirrusEP93xx/emlinux-ep93xx/libs/gpl/uClibc/include/bits/sigcontext.h:
+
+/projects/CirrusEP93xx/emlinux-ep93xx/libs/gpl/uClibc/include/asm/sigcontext.h:
+
+/projects/CirrusEP93xx/emlinux-ep93xx/libs/gpl/uClibc/include/bits/sigstack.h:
+
+/projects/CirrusEP93xx/emlinux-ep93xx/libs/gpl/uClibc/include/bits/sigthread.h:
+
+/projects/CirrusEP93xx/emlinux-ep93xx/libs/gpl/uClibc/include/sys/stat.h:
+
+/projects/CirrusEP93xx/emlinux-ep93xx/libs/gpl/uClibc/include/bits/stat.h:
+
+/projects/CirrusEP93xx/emlinux-ep93xx/libs/gpl/uClibc/include/sys/ioctl.h:
+
+/projects/CirrusEP93xx/emlinux-ep93xx/libs/gpl/uClibc/include/bits/ioctls.h:
+
+/projects/CirrusEP93xx/emlinux-ep93xx/libs/gpl/uClibc/include/asm/ioctls.h:
+
+/projects/CirrusEP93xx/emlinux-ep93xx/libs/gpl/uClibc/include/asm/ioctl.h:
+
+/projects/CirrusEP93xx/emlinux-ep93xx/libs/gpl/uClibc/include/bits/ioctl-types.h:
+
+/projects/CirrusEP93xx/emlinux-ep93xx/libs/gpl/uClibc/include/sys/ttydefaults.h:
+
+../../daemons/hardware.h:
+
+../../drivers/lirc.h:
+
+/projects/CirrusEP93xx/emlinux-ep93xx/libs/gpl/uClibc/include/asm/types.h:
+
+/projects/CirrusEP93xx/emlinux-ep93xx/libs/gpl/uClibc/include/linux/ioctl.h:
+
+../../daemons/ir_remote.h:
+
+/projects/CirrusEP93xx/emlinux-ep93xx/libs/gpl/uClibc/include/sys/time.h:
+
+/projects/CirrusEP93xx/emlinux-ep93xx/libs/gpl/uClibc/include/string.h:
+
+/projects/CirrusEP93xx/emlinux-ep93xx/libs/gpl/uClibc/include/math.h:
+
+/projects/CirrusEP93xx/emlinux-ep93xx/libs/gpl/uClibc/include/bits/huge_val.h:
+
+/projects/CirrusEP93xx/emlinux-ep93xx/libs/gpl/uClibc/include/bits/mathdef.h:
+
+/projects/CirrusEP93xx/emlinux-ep93xx/libs/gpl/uClibc/include/bits/mathcalls.h:
+
+../../daemons/lircd.h:
+
+/projects/CirrusEP93xx/emlinux-ep93xx/libs/gpl/uClibc/include/syslog.h:
+
+/projects/CirrusEP93xx/emlinux-ep93xx/libs/gpl/uClibc/include/sys/syslog.h:
+
+../../daemons/receive.h:
+
+../../daemons/transmit.h:
+
+../../daemons/hw_default.h:

@@ -1,0 +1,167 @@
+#!/bin/sh
+## EMLX startup script
+## /etc/init.d/rcS
+
+# mount file systems
+mount -a 
+mount -t ramfs ramfs /tmp
+mount -t ramfs ramfs /var
+mount -t ramfs ramfs /mnt/usb
+mount -t ramfs ramfs /mnt/disks
+mount -t usbfs none /proc/bus/usb
+mount -t sysfs sysfs /sys
+mount -t ramfs ramfs /dev
+# scan and create devices under /dev
+mdev -s 
+
+# start watchdog
+modprobe magus_wdt tmr_margin=5
+
+OS_RELEASE=`uname -r`
+
+mkdir /var/tmp
+mkdir /var/ppp
+mkdir /var/log
+mkdir /var/run
+mkdir /var/lock
+mkdir /var/lib
+mkdir /var/etc
+mkdir /var/dnrd
+mkdir /dev/pts
+mount -t devpts none /dev/pts
+
+# load some needed drivers
+modprobe loop
+
+ifconfig lo 127.0.0.1
+# ifconfig eth0 192.168.1.12
+
+/sbin/watchdog -t 1000ms /dev/watchdog
+
+## load lowbatd if it is there
+/sbin/lowbatd &
+
+## load SSL power management driver
+# /sbin/modprobe dpmm
+
+# mount flash to mount point
+#mount -t yaffs2 -o ro /dev/mtdblock3 /mnt/app
+modprobe nftl_app
+modprobe nftl_swap
+mount -t yaffs2 /dev/mtdblock4 /mnt/appdata 
+
+mkdir -p /mnt/appdata/etc
+mkdir -p /mnt/appdata/irdb
+mkdir -p /mnt/appdata/tmp
+
+mount -o bind /mnt/appdata/etc /var/etc
+
+if [ ! -f /var/etc/conf.dat ] ; then
+echo "Runtime config is missing. Copy default setting ..."
+cp /etc/conf_def.dat /var/etc/conf.dat
+rm -f /var/etc/.configed
+fi
+
+# start confd
+/sbin/confd & sleep 1 ; disableid 1001 ;
+
+CSUM=1
+check_md5sum(){
+F=$1
+cat $F > /dev/null
+if [ $? -eq 0 ]; then
+	cd `dirname ${F}`
+	md5sum -c `basename ${F}`
+	CSUM=$?
+fi
+}
+
+mount_ext2_app(){
+DEV=$1
+mount -t ext2 -o ro $DEV /mnt/app
+if [ $? -eq 0 ]; then
+check_md5sum /mnt/app/app.cramfs.md5 
+if [ $CSUM -eq 0 ]; then
+	mount /mnt/app/app.cramfs /emlx-app
+fi
+fi
+}
+
+umount_ext2_app(){
+umount /emlx-app
+umount /mnt/app
+}
+
+
+copy_UMDA_header(){
+if [ -f /mnt/app/UMDA_header.img ]; then
+echo "Copy platform tag to /dev/mtdblock6 ... "
+dd if=/mnt/app/UMDA_header.img of=/dev/mtdblock6
+mount -o remount,rw /mnt/app/
+rm -f /mnt/app/UMDA_header.img
+mount -o remount,ro /mnt/app/
+fi
+}
+
+## try /dev/nftl_app0 first
+mount_ext2_app /dev/nftl_app0
+if [ $CSUM -eq 1 ]; then
+# cannot mount from /dev/nftl_app
+umount_ext2_app
+
+# try /mnt/appdata/tmp/app.ext2
+mount_ext2_app /mnt/appdata/tmp/app.ext2
+if [ $CSUM -eq 1 ]; then
+# cannot mount from /mnt/appdata/tmp/app.ext2
+umount_ext2_app
+fi
+
+fi
+
+#install gpio driver
+modprobe gpio
+major=`cat /proc/devices | grep gpio_dev | cut -c1-3`
+mknod /dev/gpio_dev c $major 0
+
+# load applications
+if [ -x /emlx-app/rc.app ] ;then
+# before running APP, check system header
+copy_UMDA_header
+cd /emlx-app
+./rc.app start &
+else
+# install backlight driver
+#/usr/sbin/load_splash /etc/bmps/splash.bmp.gz
+modprobe ssl_bl
+major=`cat /proc/devices | grep backlight | cut -c1-3`
+mknod /dev/backlight c $major 0
+# turn it on
+/bin/ssl_bl_test /dev/backlight 250
+
+# cannot load /emlx-app/rc.app
+/usr/sbin/load_splash /etc/bmps/noapp.bmp.gz
+# run f/w check procedure
+diskdetect &
+fi
+
+modprobe isofs
+modprobe pegasus
+modprobe asix
+modprobe nfs
+modprobe sslsd
+# install FUSE driver
+/sbin/modprobe fuse
+
+mount -t yaffs2 /dev/mtdblock5 /mnt/usrdata
+
+# enable SWAP partition. /dev/mtdblock7 will be drived by SSL-NFTL driver
+/sbin/swapon /dev/nftl_swap0
+if [ ! $? -eq 0 ]; then
+/sbin/mkswap /dev/nftl_swap0
+/sbin/swapon /dev/nftl_swap0
+fi 
+
+## load PL2303 driver
+modprobe pl2303
+
+echo "rcS done!"

@@ -1,0 +1,16 @@
+VERSION
+{
+  PVMP3 {
+    global:
+      PVMP3DecoderInit;
+      PVMP3DecoderFinalize;
+      PVMP3DecoderStartL;
+      PVMP3DecoderExecuteL;
+      PVMP3DecoderStopL;
+      PVMP3DecoderResetDecoderL;
+      PVMP3DecoderTerminateDecoderL;
+      PVMP3DecoderSeekMp3Synchronization;
+    local:
+      *;
+  };
+}

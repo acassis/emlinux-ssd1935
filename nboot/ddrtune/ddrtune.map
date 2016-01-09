@@ -1,0 +1,133 @@
+
+Allocating common symbols
+Common symbol       size              file
+
+_g_dmac             0x4               dmacapi.o
+_g_fifo_sz          0x4               dmacapi.o
+_g_nch              0x4               dmacapi.o
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+*default*        0x00000000         0xffffffff
+
+Linker script and memory map
+
+                0xffff2000                . = 0xffff2000
+
+.text           0xffff2000     0x19a8
+ *(start)
+ start          0xffff2000       0x44 arm.o
+                0xffff2000                _start
+                0xffff2024                burst8
+ *(.text)
+ .text          0xffff2044      0x7b0 ddrtune.o
+                0xffff21f8                test_transfer
+                0xffff213c                check_fill_toggle_lane
+                0xffff2284                ddr_tune_word
+                0xffff2044                fill_toggle
+                0xffff26bc                ddr_tune_lane
+                0xffff24c8                main
+                0xffff20b0                check_fill_toggle
+ .text          0xffff27f4      0x544 dmacapi.o
+                0xffff2bd0                dmac_chan_cfg
+                0xffff2a18                dmac_rst
+                0xffff2ac0                dmac_exit
+                0xffff29a0                dmac_chan_rst
+                0xffff2b00                dmac_chan_en
+                0xffff2cd4                dmac_chan_status
+                0xffff27f4                dmac_init
+                0xffff2b48                dmac_chan_dis
+ .text          0xffff2d38      0x308 dma.o
+                0xffff2d38                dma_test_1_ex_bt
+                0xffff2e84                dma_test_2_ex_bt
+ .text          0xffff3040      0x2c0 gpt.o
+                0xffff3190                gpt_usec_wait
+                0xffff3088                gpt_reset
+                0xffff32e0                stop_32k_clk
+                0xffff32c0                start_32k_clk
+                0xffff3244                create_32k_clk
+                0xffff313c                gpt_stop
+                0xffff30d0                gpt_start
+                0xffff3040                gpt_init
+ .text          0xffff3300       0x78 uart.o
+                0xffff3300                uart_init
+                0xffff3334                puts
+ .text          0xffff3378       0xf0 str.o
+                0xffff33d0                long2str
+                0xffff3440                strcat
+                0xffff33a8                strlen
+                0xffff3378                strcpy
+ .text          0xffff3468      0x408 nfc.o
+                0xffff3850                nfc_nand_boot
+                0xffff3488                nfc_init
+                0xffff3700                nfc_nand_prog
+                0xffff34c4                nfc_exit
+                0xffff3784                nfc_nand_erase
+                0xffff3824                nfc_buf_write
+                0xffff34dc                nfc_cfg
+                0xffff35e8                nfc_nand_id
+                0xffff35c8                nfc_nand_rst
+                0xffff37f8                nfc_buf_read
+                0xffff3638                nfc_nand_read
+ .text          0xffff3870      0x138 nand.o
+                0xffff3870                nand_geo
+
+.glue_7         0xffff39a8        0x0
+
+.glue_7t        0xffff39a8        0x0
+
+.rodata         0xffff39a8       0xec
+ *(.rodata)
+ .rodata        0xffff39a8        0x8 nfc.o
+ .rodata        0xffff39b0       0xe4 nand.o
+
+.rodata.str1.4  0xffff3a94       0xc9
+ .rodata.str1.4
+                0xffff3a94       0xc9 ddrtune.o
+                                 0xcc (size before relaxing)
+
+.dummy
+                0xffff3b60                erom = ALIGN (0x4)
+
+.data           0xffff3b60        0x8 load address 0xffff3b60
+                0xffff3b60                sdata = .
+ *(.data)
+ .data          0xffff3b60        0x4 dmacapi.o
+ .data          0xffff3b64        0x4 gpt.o
+                0xffff3b68                edata = .
+                0xffff3b68                bss_start = ALIGN (0x4)
+
+.bss            0xffff3b68       0x1c
+ *(.bss)
+ .bss           0xffff3b68        0x4 ddrtune.o
+                0xffff3b68                _g_type
+ .bss           0xffff3b6c        0x8 gpt.o
+ .bss           0xffff3b74        0x4 nfc.o
+ COMMON         0xffff3b78        0xc dmacapi.o
+                0xffff3b78                _g_dmac
+                0xffff3b7c                _g_fifo_sz
+                0xffff3b80                _g_nch
+                0xffff3b84                bss_end = .
+                0xfffffffc                . = 0xfffffffc
+                0xfffffffc                stack = .
+LOAD ddrtune.o
+LOAD dmacapi.o
+LOAD dma.o
+LOAD gpt.o
+LOAD arm.o
+LOAD uart.o
+LOAD str.o
+LOAD nfc.o
+LOAD nand.o
+OUTPUT(ddrtune.exe elf32-littlearm)
+
+.comment        0x00000000       0x90
+ .comment       0x00000000       0x12 ddrtune.o
+ .comment       0x00000012       0x12 dmacapi.o
+ .comment       0x00000024       0x12 dma.o
+ .comment       0x00000036       0x12 gpt.o
+ .comment       0x00000048       0x12 uart.o
+ .comment       0x0000005a       0x12 str.o
+ .comment       0x0000006c       0x12 nfc.o
+ .comment       0x0000007e       0x12 nand.o

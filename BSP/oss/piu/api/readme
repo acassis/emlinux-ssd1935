@@ -1,0 +1,120 @@
+********************************************************************************************
+* Develeopment notes for PIU library and driver (ARM Linux)
+* 
+* Shao Wei
+* 24 Oct 2007
+* 
+* Terminology
+* Tx: send message to DSP (syncronized by blocking Tx before receive acknowledge from DSP)
+* Rx: receive message from DSP, and send back acknowledge if it is a blocking transmit from DSP (asyncronized)
+*
+* If you are not interested in implementation details, just go to the last part "HOW TO COMPILE" and "HOW TO USE"
+*********************************************************************************************
+
+1. FILES
+"Driver"
+piur.h			- Define PIU register
+piu_types.h		- Header file for type definition
+piu.h			- Header file for control code API
+piu.c			- Control code
+piuk.h			- Header file for driver
+piuk.c			- PIU driver as char device
+mk.sh			- script to configure Makefile for PIU driver
+Makefile		- Makefile to generate kernel module "sslpiu.ko"
+"Library"
+api/piu_types.h		- Header file for type definition
+api/piulib.h		- Header file for library API
+api/piulib.c		- Source code for shared library
+api/Makefile		- Makefile to generate shared library "libpiu.so" and excutable ELF file "test"
+
+
+2. Communication Protocol via PIU
+
+2.1 Use PIU Slot 1 as master channel, Slot 2 as slave channel and Slot 3 as slave nonblocking channel
+PIU Slot 1 (used by ARM as master, used for blocking transmit)
+- ARM write command/response to COM0, DSP write acknowledge to REP0
+- ARM's Tx channel
+- Related interrupt: PIU_ACK_IN (hidden in PIU driver)
+PIU slot 2 (used by DSP as master, used for blocking transmit)
+- DSP write command/response to REP1, ARM write acknowledge to COM1
+- ARM's Rx channel (for blocking transmit from DSP)
+- Related interrupt: PIU_MSG_IN (to which PIU's callback function is registered)
+PIU slot 3 (used by DSP as master, only for nonblocking transmit)
+- DSP write command/response to REP2
+- ARM's Rx channel (for nonblocking transmit from DSP)
+- Related interrupt: PIU_NONBLOCK_MSG_IN (to which PIU's callback function is registered)
+
+Three interrupts are used:
+PIU_MSG_IN - R1WRHINT
+PIU_ACK_IN - R0WRHINT
+PIU_NONBLOCK_MSG_IN - R2WRHINT
+
+2.2 Tx is blocking. 
+Before ARM get acknowledge from DSP, the Tx channel would not be released so other Tx calls will be blocked. This is implemened in PIU driver using mutex or completion. Noted there is no indication to user whether the ack is received or not when the Tx call returns.
+
+2.3 Release of Tx channel (implemented in PIU driver).
+Tx channel will be released when ARM get acknowledge from the other side DSP. So PIU_ACK_IN interrupt must be always enabled in driver. When ack is received, the Tx mutex will be released or the complete is called. BTW, only Tx has mutex, Rx doesn't have.
+
+2.4 Add timeout feature to Tx. 
+If ARM doesn't get any acknowledge from DSP for 1 second, ARM will release the Tx channel. This is implemented by using add_timer() or wait_for_completion_interruptible_timeout(). But there is no indication of the Tx failure.
+  
+2.5 Rx is asyncronized and no explicit calling by user
+Usually, there is no explicit calling of piu_rx() function in application's code. The piu_rx() is called in the PIU library signal handler, just before calling the PIU callback function. Due to current design, piu_rx() would determine which channel, blocking or nonblocking, transmits the message and therefore pick up the message accordingly.
+
+2.6 Queue ID (task ID)
+Any message transfered to PIU must consist of queue ID and message body. Queue ID is used to register callback functions to PIU at initialization and determines which callback function should be called when a message is received during runtime. In PIU driver, it is the one that should be written into PIU COMx/REPx registers.
+
+2.7 Physical memory segment reserved for shared message body (Handled by PIU driver)
+The message body will contain all the information to be transfered between ARM and DSP. To buffer the information, we defined a shared memory segment on the physical memory (SDRAM or DDR), so that both sides can read or write. PIU message will be written to this shared buffer first, then inform the other side to pick it up. But do remember don't write Queue ID to register COM0 (Tx channel) before you update the buffer. Similarly, don't write Queue ID to register COM1 (Rx channel), i.e., acknowledge the reception, before you pick up the message from the buffer. The shared memory has reserved space for Tx, Rx and nonblocking Rx, independently. 
+The message body size for PIU transfer is limited, now the limitation is 64 bytes (defined by PIU_INTERNAL_MEM, PIU_TX_MEM, PIU_RX_MEM). So there are all together 64x3 bytes reserved in the memory. And the physical address of this region is defined in DSP's memory map file .lnk, labeled as "psl_piu_section_tx_rx" (see piu driver in DSP). You should check its address in the DSP generated .ln file and inform PIU driver when you are going to insert it into the kernel. 
+
+2.8 User-mode Callback function (Handled by PIU library)
+Callback function runs in user-space so it is also registered in user-space. To inform the user-space that a message has been received, the driver needs to send out a signal in its interrupt service routine to the user-space PIU library. To avoid the lose of signal in standard signal mechanism, we use the POSIX real-time signal which can be queued. The signal number can be chosen between SIGRTMIN and SIGRTMAX. However, we found that the number of SIGRTMIN/SIGRTMAX may be different in kernel and in user-space. So we use ioctl to set the real-time signal number determined in user-space to the PIU driver in kernel.
+
+- The signal handler in the library code, is non-preemptable within a process. So a process won't respond to the next signal before it finishs serving the previous one. Real-time signals would be queued, and signal with smaller number would be served with higher priority.
+
+
+3. KNOWN BUGS
+
+3.1 Each process has its own copy of data section defined in shared library libpiu.so, even the global variables
+libpiu.so is built as a shared library. But the global variables defined in piulib.c (eg, _piu_c[], _piu_ctx[]) is not shared between processes that call this library; each process will have its own copy of those global variables.
+
+3.2 "Queue ID" can't be shared between processes.
+"Queue ID" used for registering callback functions are not supposed to be shared between different processes, unless you make it purposely. This is because the Rx signal would be sent to all processes and the process will call its own copy of callback function corresponding to the queue id.
+
+
+4. HOW TO COMPILE
+
+4.1 Generate PIU driver "sslpiu.ko"
+> ./mk.sh
+Choose 4 for magus P2 board
+Done
+
+Remarks: Settings in Makefile
+EXTRA_CFLAGS += -DPIU_SEMAPHORE_MODE_COMPLETE		if defined, use complete rather than mutex
+EXTRA_CFLAGS += -DPIU_ENABLE_TIMEOUT			if defined, add timeout feature for PIU Tx channel; only useful when mutex is used
+EXTRA_CFLAGS += -DPIU_NONBLOCK				if defined, support nonblocking receive; need DSP side support nonblocking transmit also
+
+
+4.2 Compile the PIU Library "libpiu.so"
+> cd api
+> ./mk.sh
+
+Remarks: Setting for compilation
+-DPIU_NONBLOCK						if defined, support nonblocking receive
+
+
+5. HOW TO USE
+
+5.1 Insert module "sslpiu.ko" to kernel
+Get the shared memory address "mem_addr" from DSP's linker file (search label "psl_piu_section_tx_rx" in .ln file)
+> insmod sslpiu.ko addr=0xd0132000 mem_addr=0x90811000 irq=0
+
+5.2 Create piu node if needed
+> cat /proc/devices
+Get SSL_PIU's major number
+> mknod /dev/piu c major_num 0
+
+
+4.5 If DSP uses OCEM debugger to run application using PIU, you should start its debugger first, otherwise it will reset all the PIU registers.
+

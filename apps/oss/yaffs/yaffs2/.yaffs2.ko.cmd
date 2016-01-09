@@ -1,0 +1,1 @@
+cmd_/mnt/hda2/projects/SSD1933/emlinux-ssd1933/apps/oss/yaffs/yaffs2/yaffs2.ko := ld -m elf_i386 -r -m elf_i386   -o /mnt/hda2/projects/SSD1933/emlinux-ssd1933/apps/oss/yaffs/yaffs2/yaffs2.ko /mnt/hda2/projects/SSD1933/emlinux-ssd1933/apps/oss/yaffs/yaffs2/yaffs2.o /mnt/hda2/projects/SSD1933/emlinux-ssd1933/apps/oss/yaffs/yaffs2/yaffs2.mod.o

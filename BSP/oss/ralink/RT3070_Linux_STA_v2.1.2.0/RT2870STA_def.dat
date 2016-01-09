@@ -1,0 +1,9 @@
+#The word of "Default" must not be removed
+Default
+WirelessMode=9
+HT_MCS=33
+TxPower=100
+BGProtection=1
+HT_OpMode=0
+HT_AutoBA=1
+HT_PROTECT=1

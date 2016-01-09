@@ -1,0 +1,89 @@
+# Export product profiles
+if [ "a${EMLX_PROFILE}" = "a" ]; then
+EMLX_PROFILE=TEAC_WAP8900
+export EMLX_PROFILE
+fi
+
+. ${EMLXBASE}/configs/profiles/${EMLX_PROFILE}
+export PLATFORM CUSTOMER MODEL PRODUCT_NAME
+
+ARCH=arm
+KERNEL_IMAGE=uImage
+
+for TAG in VERSION PATCHLEVEL SUBLEVEL EXTRAVERSION ; do
+	eval `sed -ne "/^$TAG/s/[ 	]//gp" ${EMLXBASE}/kernel/Makefile`
+done
+KERNEL_VER_TAG="${VERSION}.${PATCHLEVEL}.${SUBLEVEL}${EXTRAVERSION}ssl"
+
+
+TOOLDIR=/usr/local/arm/3.4.6/
+KTOOLDIR=${TOOLDIR}
+CROSS=$TOOLDIR/bin/$ARCH-linux-
+CROSS_COMPILE=${CROSS}
+CFLAGS_OPT="-fPIC -Os -pipe "
+#CFLAGS_OPT="-fPIC -Os -pipe -march=armv5"
+#CFLAGS_NOSTD="${CFLAGS} -fno-builtin -nostdinc"
+CFLAGS_INC="-I${EMLXBASE} -I${EMLXBASE}/libs/gpl/libiconv-1.9.1/build_${ARCH}/include"
+CFLAGS_INC="${CFLAGS_INC} -I${EMLXBASE}/kernel/include -I${TOOLDIR}/arm-linux/include"
+CFLAGS_PLATFORM="-D${PLATFORM} -DEMLX"
+
+PROG_CFLAGS="$CFLAGS_OPT $CFLAGS_NOSTD $CFLAGS_INC $CFLAGS_PLATFORM"
+LIB_CFLAGS="$CFLAGS_OPT"
+PATH=${TOOLDIR}/bin:${PATH}
+export PATH
+export ARCH TOOLDIR KTOOLDIR CROSS CROSS_COMPILE PROG_CFLAGS LIB_CFLAGS
+
+CC=${CROSS}gcc
+AS=${CROSS}as
+CXX=${CROSS}c++
+AR=${CROSS}ar
+LD=${CROSS}ld
+OBJCOPY=${CROSS}objcopy
+RANLIB=${CROSS}ranlib
+STRIPTOOL=${CROSS}strip
+STRIP=${STRIPTOOL}
+
+export CC AS CXX AR LD OBJCOPY RANLIB STRIPTOOL STRIP
+
+LIBGCC=`${CC} -print-libgcc-file-name`
+LIBGCC_DIR=`dirname ${LIBGCC}`
+
+#PROG_CFLAGS="${PROG_CFLAGS} -I${TOOLDIR}/arm-linux/include"
+
+export LIBGCC LIBGCC_DIR PROG_CFLAGS
+
+# CRT0="${EMLXBASE}/libs/gpl/uClibc/lib/crt0.o"
+# CRT1="${EMLXBASE}/libs/gpl/uClibc/lib/crt1.o"
+# CRTi="${EMLXBASE}/libs/gpl/uClibc/lib/crti.o"
+# CRTn="${EMLXBASE}/libs/gpl/uClibc/lib/crtn.o"
+# SCRT1="${EMLXBASE}/libs/gpl/uClibc/lib/Scrt1.o"
+# CRTBegin="${LIBGCC_DIR}/crtbegin.o"
+# CRTEnd="${LIBGCC_DIR}/crtend.o"
+# LDPATH="-L${EMLXBASE}/libs/gpl/uClibc/lib -L${LIBGCC_DIR}"
+# LDPATH="-L${EMLXBASE}/libs/gpl/uClibc/lib"
+# LDPATH="-L${LIBGCC_DIR}"
+#LDLIBS="-lc -lgcc"
+#LDLIBS="-lc ${LIBGCC}"
+# LDFLAGS="${LDPATH} -nodefaultlibs ${LIBGCC}"
+#export CRT0 CRT1 CRTi CRTn SCRT1 CRTBegin CRTEnd LDPATH LDLIBS LDFLAGS
+LDPATH=""
+LDLIBS=""
+LDFLAGS="${LDPATH} "
+export LDPATH LDLIBS LDFLAGS
+
+## C++ stuff
+##PROG_CXXFLAGS="-I${EMLXBASE}/libs/gpl/uClibc++/include"
+#LIBCPP="-L${EMLXBASE}/libs/gpl/uClibc++/src -luClibc++"
+# LDCPPFLAGS="${LDPATH} -nodefaultlibs "
+PROG_CXXFLAGS=""
+LIBCPP="-lstdc++ "
+LDCPPFLAGS="${LDPATH} "
+export LIBCPP LDCPPFLAGS
+
+# for Qt library
+export QMAKESPEC=${EMLXBASE}/libs/oss/qt-lib/Qt/mkspecs/emlx-ssd1933-g++
+
+# for FLTK library
+export FLTK_CXXFLAGS="-O2 -Wall -Wunused  -fPIC -I${EMLXBASE}/libs/oss/fltk/"
+export FLTK_LDLIBS="-L${TOOLDIR}/arm-linux/usr/X11R6/lib -lX11 -lXi -lXft -lfontconfig -lexpat -lXrender -lfreetype -lpthread -lm  -lXext  -lsupc++ -L${EMLXBASE}/libs/oss/fltk/lib -lfltk2 -lfltk2_images -lfltk2_jpeg -lfltk2_png -lfltk2_z"
+

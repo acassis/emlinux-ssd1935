@@ -1,0 +1,23 @@
+# Embedded Linux building profile for TEAC's AudioMate HCA-150 version
+
+PLATFORM="ARM_SSD1935"
+CUSTOMER="HMS"
+MODEL="HCA-150O"
+FLAGS="FORCE"
+
+PRODUCT_NAME="WAP-R8900"
+#### Media Renderer Device Description Information ###########
+COMPANY="TEAC(R) Media Systems "
+COMPANY_URL="http://www.teac.de"
+MODEL_DESCRIPTION="N/A"
+MODEL_NAME="WAP-R8900"
+MODEL_NUMBER="X1"
+##############################################################
+LOGO_BMP=${EMLXBASE}/configs/profiles/TEAC_WAP_Logo.bmp.gz
+NOAPP_BMP=${EMLXBASE}/configs/profiles/DefaultNoApp.bmp.gz
+UPGRADE_BMP=${EMLXBASE}/configs/profiles/DefaultUpgrade.bmp.gz
+LOWBAT_BMP=${EMLXBASE}/configs/profiles/DefaultLowBattery.bmp.gz
+
+## Supporting Features
+## export ENABLE_WLAN35G=y
+CUSTOME_VERSION=${EMLXBASE}/configs/profiles/TEAC_WAP8900_VERSION

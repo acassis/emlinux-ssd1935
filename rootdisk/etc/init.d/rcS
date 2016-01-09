@@ -1,0 +1,108 @@
+#!/bin/sh
+## EMLX startup script
+## /etc/init.d/rcS
+
+# mount file systems
+mount -a 
+
+# start watchdog
+modprobe magus_wdt tmr_margin=5
+
+mount -t ramfs ramfs /tmp
+mount -t ramfs ramfs /var
+mount -t ramfs ramfs /dev
+mount -t ramfs ramfs /mnt/usb
+mount -t ramfs ramfs /mnt/disks
+mount -t usbfs none /proc/bus/usb
+mount -t sysfs sysfs /sys
+
+OS_RELEASE=`uname -r`
+
+# install FUSE driver
+/sbin/modprobe fuse
+# scan and create devices under /dev
+mdev -s 
+
+# sysctl -w kernel.hotplug=/sbin/mdev
+# install backlight driver
+modprobe ssl_bl
+# create PIU device
+major=`cat /proc/devices | grep backlight | cut -c1-3`
+mknod /dev/backlight c $major 0
+# turn it on
+/bin/ssl_bl_test /dev/backlight 250
+/usr/sbin/load_splash /etc/bmps/splash.bmp.gz
+
+#install gpio driver
+modprobe gpio
+major=`cat /proc/devices | grep gpio_dev | cut -c1-3`
+mknod /dev/gpio_dev c $major 0
+
+
+mkdir /var/tmp
+mkdir /var/ppp
+mkdir /var/log
+mkdir /var/run
+mkdir /var/lock
+mkdir /var/lib
+mkdir /var/etc
+mkdir /var/dnrd
+mkdir /dev/pts
+mount -t devpts none /dev/pts
+
+# load some needed drivers
+modprobe loop
+modprobe isofs
+modprobe pegasus
+modprobe asix
+modprobe nfs
+modprobe sslsd
+modprobe nftl partition=7
+
+ifconfig lo 127.0.0.1
+# ifconfig eth0 192.168.1.12
+
+/sbin/watchdog -t 1000ms /dev/watchdog
+
+## load SSL power management driver
+/sbin/modprobe dpmm
+
+# mount flash to mount point
+mount -t yaffs2 -o ro /dev/mtdblock3 /mnt/app 
+mount -t yaffs2 /dev/mtdblock4 /mnt/appdata 
+mount -t yaffs2 /dev/mtdblock5 /mnt/usrdata 
+
+mkdir -p /mnt/appdata/etc
+mkdir -p /mnt/appdata/irdb
+mkdir -p /mnt/appdata/tmp
+
+mount -o bind /mnt/appdata/etc /var/etc
+
+# enable SWAP partition. /dev/mtdblock7 will be drived by SSL-NFTL driver
+/sbin/swapon /dev/nftl0
+if [ ! $? -eq 0 ]; then
+/sbin/mkswap /dev/nftl0
+/sbin/swapon /dev/nftl0
+fi 
+
+# start confd
+/sbin/confd &
+
+
+# mount emlx-app
+if [ -f /mnt/app/app.cramfs ]; then
+mount -t cramfs -o loop /mnt/app/app.cramfs /emlx-app
+fi
+
+# load applications
+if [ -x /emlx-app/rc.app ] ;then
+cd /emlx-app
+./rc.app start &
+else
+# cannot load /emlx-app/rc.app
+/usr/sbin/load_splash /etc/bmps/noapp.bmp.gz
+# run f/w check procedure
+diskdetect &
+fi
+
+echo "rcS done!"

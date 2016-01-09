@@ -1,0 +1,549 @@
+make -C tools
+make[1]: Entering directory `/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/tools'
+gcc -g bin2h.c -o bin2h
+make[1]: Leaving directory `/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/tools'
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/tools/bin2h
+cp -f os/linux/Makefile.6 /mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/Makefile
+make  -C  /projects/SSD1933/emlinux-ssd1933/kernel SUBDIRS=/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux modules
+make[1]: Entering directory `/mnt/hda2/projects/SSD1933/emlinux-ssd1933/linux-2.6.24-ssl'
+  CC [M]  /mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.o
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:31:23: rt_config.h: No such file or directory
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:45: error: syntax error before '*' token
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:46: warning: function declaration isn't a prototype
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c: In function `md5_mac':
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:47: error: `MD5_CTX' undeclared (first use in this function)
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:47: error: (Each undeclared identifier is reported only once
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:47: error: for each function it appears in.)
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:47: error: syntax error before "context"
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:49: error: implicit declaration of function `MD5Init'
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:49: error: `context' undeclared (first use in this function)
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:50: error: implicit declaration of function `MD5Update'
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:50: error: `key' undeclared (first use in this function)
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:50: error: `key_len' undeclared (first use in this function)
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:51: error: `data' undeclared (first use in this function)
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:51: error: `data_len' undeclared (first use in this function)
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:53: error: implicit declaration of function `MD5Final'
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:53: error: `mac' undeclared (first use in this function)
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c: At top level:
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:68: error: syntax error before '*' token
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:69: warning: function declaration isn't a prototype
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c: In function `hmac_md5':
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:70: error: `MD5_CTX' undeclared (first use in this function)
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:70: error: syntax error before "context"
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:71: error: `u8' undeclared (first use in this function)
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:79: error: `key_len' undeclared (first use in this function)
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:80: error: syntax error before "ttcontext"
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:82: error: `ttcontext' undeclared (first use in this function)
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:83: error: `key' undeclared (first use in this function)
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:84: error: `tk' undeclared (first use in this function)
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:100: error: implicit declaration of function `NdisZeroMemory'
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:100: error: `k_ipad' undeclared (first use in this function)
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:101: error: `k_opad' undeclared (first use in this function)
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:103: error: implicit declaration of function `NdisMoveMemory'
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:113: error: `context' undeclared (first use in this function)
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:115: error: `data' undeclared (first use in this function)
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:115: error: `data_len' undeclared (first use in this function)
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:116: error: `mac' undeclared (first use in this function)
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c: At top level:
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:161: error: syntax error before "MD5Init"
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:161: error: syntax error before '*' token
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:162: warning: return type defaults to `int'
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:162: warning: function declaration isn't a prototype
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c: In function `MD5Init':
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:163: error: `pCtx' undeclared (first use in this function)
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c: At top level:
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:189: error: syntax error before "MD5Update"
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:189: error: syntax error before '*' token
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:190: warning: return type defaults to `int'
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:190: warning: function declaration isn't a prototype
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c: In function `MD5Update':
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:192: error: `UINT32' undeclared (first use in this function)
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:192: error: syntax error before "TfTimes"
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:196: error: `temp' undeclared (first use in this function)
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:196: error: `pCtx' undeclared (first use in this function)
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:198: error: `LenInBytes' undeclared (first use in this function)
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:211: error: `UCHAR' undeclared (first use in this function)
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:211: error: `pAds' undeclared (first use in this function)
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:211: error: syntax error before ')' token
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:215: error: syntax error before ')' token
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:216: warning: `return' with no value, in function returning non-void
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:219: error: syntax error before ')' token
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:221: error: implicit declaration of function `MD5Transform'
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:221: error: syntax error before ')' token
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:223: error: `pData' undeclared (first use in this function)
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:228: error: `TfTimes' undeclared (first use in this function)
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:232: error: syntax error before ')' token
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:234: error: syntax error before ')' token
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:241: error: syntax error before ')' token
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:241: warning: left-hand operand of comma expression has no effect
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:241: error: syntax error before ')' token
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c: At top level:
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:261: error: syntax error before "MD5Final"
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:261: error: syntax error before "Digest"
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:262: warning: return type defaults to `int'
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:262: warning: function declaration isn't a prototype
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c: In function `MD5Final':
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:263: error: `UCHAR' undeclared (first use in this function)
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:263: error: syntax error before "Remainder"
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:265: error: `pAppend' undeclared (first use in this function)
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:266: warning: ISO C90 forbids mixed declarations and code
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:268: error: `Remainder' undeclared (first use in this function)
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:268: error: `pCtx' undeclared (first use in this function)
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:270: error: `PadLenInBytes' undeclared (first use in this function)
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:272: error: syntax error before ')' token
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:280: error: syntax error before ')' token
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:290: error: `UINT32' undeclared (first use in this function)
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:290: error: syntax error before ')' token
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:300: error: syntax error before ')' token
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:304: error: syntax error before ')' token
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:308: error: syntax error before ')' token
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:318: error: syntax error before ')' token
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:322: error: syntax error before ')' token
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c: At top level:
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:343: error: syntax error before "MD5Transform"
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:343: error: syntax error before "Buf"
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:344: warning: return type defaults to `int'
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:344: warning: function declaration isn't a prototype
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c: In function `MD5Transform':
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:345: error: `UINT32' undeclared (first use in this function)
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:345: error: syntax error before "Reg"
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:348: error: syntax error before "LShiftVal"
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:346: warning: unused variable `i'
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c: At top level:
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:358: error: syntax error before "MD5Table"
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:358: warning: type defaults to `int' in declaration of `MD5Table'
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:379: warning: data definition has no type or storage class
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:382: error: syntax error before "for"
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:393: warning: type defaults to `int' in declaration of `Temp'
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:393: error: `Reg' undeclared here (not in a function)
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:393: warning: data definition has no type or storage class
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:394: warning: type defaults to `int' in declaration of `Reg'
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:394: error: invalid initializer
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:394: warning: data definition has no type or storage class
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:395: warning: type defaults to `int' in declaration of `Reg'
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:395: error: conflicting types for 'Reg'
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:394: error: previous definition of 'Reg' was here
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:395: error: conflicting types for 'Reg'
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:394: error: previous definition of 'Reg' was here
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:395: error: invalid initializer
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:395: warning: data definition has no type or storage class
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:396: warning: type defaults to `int' in declaration of `Reg'
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:396: error: conflicting types for 'Reg'
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:395: error: previous definition of 'Reg' was here
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:396: error: conflicting types for 'Reg'
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:394: error: previous definition of 'Reg' was here
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:396: error: invalid initializer
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:396: warning: data definition has no type or storage class
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:397: warning: type defaults to `int' in declaration of `Reg'
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:397: error: conflicting types for 'Reg'
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:396: error: previous definition of 'Reg' was here
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:397: error: conflicting types for 'Reg'
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:394: error: previous definition of 'Reg' was here
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:397: error: invalid initializer
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:397: warning: data definition has no type or storage class
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:398: error: syntax error before '}' token
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:405: warning: type defaults to `int' in declaration of `Temp'
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:405: error: redefinition of 'Temp'
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:393: error: previous definition of 'Temp' was here
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:405: error: initializer element is not constant
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:405: warning: data definition has no type or storage class
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:406: warning: type defaults to `int' in declaration of `Reg'
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:406: error: conflicting types for 'Reg'
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:397: error: previous definition of 'Reg' was here
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:406: error: redefinition of 'Reg'
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:394: error: previous definition of 'Reg' was here
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:406: error: invalid initializer
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:406: warning: data definition has no type or storage class
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:407: warning: type defaults to `int' in declaration of `Reg'
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:407: error: conflicting types for 'Reg'
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:406: error: previous definition of 'Reg' was here
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:407: error: conflicting types for 'Reg'
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:394: error: previous definition of 'Reg' was here
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:407: error: invalid initializer
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:407: warning: data definition has no type or storage class
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:408: warning: type defaults to `int' in declaration of `Reg'
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:408: error: conflicting types for 'Reg'
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:407: error: previous definition of 'Reg' was here
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:408: error: conflicting types for 'Reg'
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:394: error: previous definition of 'Reg' was here
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:408: error: invalid initializer
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:408: warning: data definition has no type or storage class
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:409: warning: type defaults to `int' in declaration of `Reg'
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:409: error: conflicting types for 'Reg'
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:408: error: previous definition of 'Reg' was here
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:409: error: conflicting types for 'Reg'
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:394: error: previous definition of 'Reg' was here
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:409: error: invalid initializer
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:409: warning: data definition has no type or storage class
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:410: error: syntax error before '}' token
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:417: warning: type defaults to `int' in declaration of `Temp'
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:417: error: redefinition of 'Temp'
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:405: error: previous definition of 'Temp' was here
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:417: error: redefinition of 'Temp'
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:405: error: previous definition of 'Temp' was here
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:417: error: initializer element is not constant
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:417: warning: data definition has no type or storage class
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:418: warning: type defaults to `int' in declaration of `Reg'
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:418: error: conflicting types for 'Reg'
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:409: error: previous definition of 'Reg' was here
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:418: error: redefinition of 'Reg'
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:394: error: previous definition of 'Reg' was here
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:418: error: invalid initializer
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:418: warning: data definition has no type or storage class
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:419: warning: type defaults to `int' in declaration of `Reg'
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:419: error: conflicting types for 'Reg'
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:418: error: previous definition of 'Reg' was here
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:419: error: conflicting types for 'Reg'
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:394: error: previous definition of 'Reg' was here
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:419: error: invalid initializer
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:419: warning: data definition has no type or storage class
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:420: warning: type defaults to `int' in declaration of `Reg'
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:420: error: conflicting types for 'Reg'
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:419: error: previous definition of 'Reg' was here
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:420: error: conflicting types for 'Reg'
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:394: error: previous definition of 'Reg' was here
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:420: error: invalid initializer
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:420: warning: data definition has no type or storage class
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:421: warning: type defaults to `int' in declaration of `Reg'
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:421: error: conflicting types for 'Reg'
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:420: error: previous definition of 'Reg' was here
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:421: error: conflicting types for 'Reg'
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:394: error: previous definition of 'Reg' was here
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:421: error: invalid initializer
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:421: warning: data definition has no type or storage class
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:422: error: syntax error before '}' token
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:429: warning: type defaults to `int' in declaration of `Temp'
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:429: error: redefinition of 'Temp'
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:417: error: previous definition of 'Temp' was here
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:429: error: redefinition of 'Temp'
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:405: error: previous definition of 'Temp' was here
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:429: error: initializer element is not constant
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:429: warning: data definition has no type or storage class
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:430: warning: type defaults to `int' in declaration of `Reg'
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:430: error: conflicting types for 'Reg'
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:421: error: previous definition of 'Reg' was here
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:430: error: redefinition of 'Reg'
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:394: error: previous definition of 'Reg' was here
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:430: error: invalid initializer
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:430: warning: data definition has no type or storage class
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:431: warning: type defaults to `int' in declaration of `Reg'
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:431: error: conflicting types for 'Reg'
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:430: error: previous definition of 'Reg' was here
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:431: error: conflicting types for 'Reg'
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:394: error: previous definition of 'Reg' was here
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:431: error: invalid initializer
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:431: warning: data definition has no type or storage class
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:432: warning: type defaults to `int' in declaration of `Reg'
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:432: error: conflicting types for 'Reg'
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:431: error: previous definition of 'Reg' was here
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:432: error: conflicting types for 'Reg'
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:394: error: previous definition of 'Reg' was here
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:432: error: invalid initializer
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:432: warning: data definition has no type or storage class
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:433: warning: type defaults to `int' in declaration of `Reg'
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:433: error: conflicting types for 'Reg'
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:432: error: previous definition of 'Reg' was here
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:433: error: conflicting types for 'Reg'
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:394: error: previous definition of 'Reg' was here
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:433: error: invalid initializer
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:433: warning: data definition has no type or storage class
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:434: error: syntax error before '}' token
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:457: error: syntax error before '*' token
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:458: warning: return type defaults to `int'
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:458: warning: function declaration isn't a prototype
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c: In function `SHAInit':
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:459: error: `pCtx' undeclared (first use in this function)
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c: At top level:
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:485: error: syntax error before "SHAUpdate"
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:485: error: syntax error before '*' token
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:486: warning: return type defaults to `int'
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:486: warning: function declaration isn't a prototype
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c: In function `SHAUpdate':
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:487: error: `UINT32' undeclared (first use in this function)
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:487: error: syntax error before "TfTimes"
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:490: error: `UCHAR' undeclared (first use in this function)
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:490: error: syntax error before "err"
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:492: error: `temp1' undeclared (first use in this function)
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:492: error: `pCtx' undeclared (first use in this function)
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:493: error: `temp2' undeclared (first use in this function)
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:495: error: `LenInBytes' undeclared (first use in this function)
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:502: error: `err' undeclared (first use in this function)
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:511: error: `pAds' undeclared (first use in this function)
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:511: error: syntax error before ')' token
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:515: error: syntax error before ')' token
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:519: error: syntax error before ')' token
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:522: error: syntax error before ')' token
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:523: error: implicit declaration of function `SHATransform'
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:523: error: syntax error before ')' token
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:525: error: `pData' undeclared (first use in this function)
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:530: error: `TfTimes' undeclared (first use in this function)
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:534: error: syntax error before ')' token
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:537: error: syntax error before ')' token
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:538: error: syntax error before ')' token
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:545: error: syntax error before ')' token
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:545: warning: left-hand operand of comma expression has no effect
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:545: error: syntax error before ')' token
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c: At top level:
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:553: error: syntax error before "SHAFinal"
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:553: error: syntax error before '*' token
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:554: warning: return type defaults to `int'
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:554: warning: function declaration isn't a prototype
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c: In function `SHAFinal':
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:555: error: `UCHAR' undeclared (first use in this function)
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:555: error: syntax error before "Remainder"
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:557: error: `pAppend' undeclared (first use in this function)
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:558: warning: ISO C90 forbids mixed declarations and code
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:560: error: `Remainder' undeclared (first use in this function)
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:560: error: `pCtx' undeclared (first use in this function)
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:562: error: syntax error before ')' token
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:564: error: `PadLenInBytes' undeclared (first use in this function)
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:572: error: syntax error before ')' token
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:582: error: syntax error before ')' token
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:583: error: `UINT32' undeclared (first use in this function)
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:583: error: syntax error before ')' token
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:593: error: syntax error before ')' token
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:597: error: syntax error before ')' token
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:598: error: syntax error before ')' token
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:602: error: syntax error before ')' token
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:612: error: syntax error before ')' token
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:613: error: syntax error before ')' token
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:620: error: `Digest' undeclared (first use in this function)
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c: At top level:
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:629: error: syntax error before "SHATransform"
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:629: error: syntax error before "Buf"
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:630: warning: return type defaults to `int'
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:630: warning: function declaration isn't a prototype
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c: In function `SHATransform':
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:631: error: `UINT32' undeclared (first use in this function)
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:631: error: syntax error before "Reg"
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:633: error: syntax error before "W"
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:635: error: syntax error before "SHA1Table"
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:632: warning: unused variable `i'
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c: At top level:
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:638: warning: type defaults to `int' in declaration of `Reg'
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:638: error: redefinition of 'Reg'
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:433: error: previous definition of 'Reg' was here
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:638: error: conflicting types for 'Reg'
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:394: error: previous definition of 'Reg' was here
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:638: error: `Buf' undeclared here (not in a function)
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:638: warning: data definition has no type or storage class
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:639: warning: type defaults to `int' in declaration of `Reg'
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:639: error: conflicting types for 'Reg'
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:638: error: previous definition of 'Reg' was here
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:639: error: conflicting types for 'Reg'
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:394: error: previous definition of 'Reg' was here
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:639: warning: data definition has no type or storage class
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:640: warning: type defaults to `int' in declaration of `Reg'
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:640: error: conflicting types for 'Reg'
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:639: error: previous definition of 'Reg' was here
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:640: error: conflicting types for 'Reg'
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:394: error: previous definition of 'Reg' was here
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:640: warning: data definition has no type or storage class
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:641: warning: type defaults to `int' in declaration of `Reg'
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:641: error: conflicting types for 'Reg'
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:640: error: previous definition of 'Reg' was here
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:641: error: redefinition of 'Reg'
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:394: error: previous definition of 'Reg' was here
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:641: warning: data definition has no type or storage class
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:642: warning: type defaults to `int' in declaration of `Reg'
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:642: error: conflicting types for 'Reg'
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:641: error: previous definition of 'Reg' was here
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:642: error: conflicting types for 'Reg'
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:394: error: previous definition of 'Reg' was here
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:642: warning: data definition has no type or storage class
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:645: error: syntax error before "for"
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:648: error: `i' undeclared here (not in a function)
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:648: error: syntax error before '|=' token
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:649: error: syntax error before '|=' token
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:650: error: syntax error before '|=' token
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:679: warning: type defaults to `int' in declaration of `Temp'
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:679: error: redefinition of 'Temp'
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:429: error: previous definition of 'Temp' was here
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:679: error: redefinition of 'Temp'
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:405: error: previous definition of 'Temp' was here
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:679: error: initializer element is not constant
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:679: warning: data definition has no type or storage class
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:680: warning: type defaults to `int' in declaration of `Reg'
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:680: error: redefinition of 'Reg'
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:642: error: previous definition of 'Reg' was here
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:680: error: conflicting types for 'Reg'
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:394: error: previous definition of 'Reg' was here
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:680: error: invalid initializer
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:680: warning: data definition has no type or storage class
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:681: warning: type defaults to `int' in declaration of `Reg'
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:681: error: conflicting types for 'Reg'
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:680: error: previous definition of 'Reg' was here
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:681: error: redefinition of 'Reg'
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:394: error: previous definition of 'Reg' was here
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:681: error: invalid initializer
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:681: warning: data definition has no type or storage class
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:682: warning: type defaults to `int' in declaration of `Reg'
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:682: error: conflicting types for 'Reg'
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:681: error: previous definition of 'Reg' was here
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:682: error: conflicting types for 'Reg'
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:394: error: previous definition of 'Reg' was here
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:682: error: invalid initializer
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:682: warning: data definition has no type or storage class
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:683: warning: type defaults to `int' in declaration of `Reg'
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:683: error: conflicting types for 'Reg'
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:682: error: previous definition of 'Reg' was here
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:683: error: conflicting types for 'Reg'
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:394: error: previous definition of 'Reg' was here
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:683: error: invalid initializer
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:683: warning: data definition has no type or storage class
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:684: warning: type defaults to `int' in declaration of `Reg'
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:684: error: conflicting types for 'Reg'
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:683: error: previous definition of 'Reg' was here
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:684: error: conflicting types for 'Reg'
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:394: error: previous definition of 'Reg' was here
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:684: error: invalid initializer
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:684: warning: data definition has no type or storage class
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:686: error: syntax error before '}' token
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:699: error: syntax error before "FSb"
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:699: warning: type defaults to `int' in declaration of `FSb'
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:733: warning: data definition has no type or storage class
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:804: error: syntax error before "FT0"
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:804: warning: type defaults to `int' in declaration of `FT0'
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:804: warning: data definition has no type or storage class
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:808: error: syntax error before "FT1"
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:808: warning: type defaults to `int' in declaration of `FT1'
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:808: warning: data definition has no type or storage class
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:812: error: syntax error before "FT2"
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:812: warning: type defaults to `int' in declaration of `FT2'
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:812: warning: data definition has no type or storage class
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:816: error: syntax error before "FT3"
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:816: warning: type defaults to `int' in declaration of `FT3'
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:816: warning: data definition has no type or storage class
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:823: error: syntax error before "RSb"
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:823: warning: type defaults to `int' in declaration of `RSb'
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:857: warning: data definition has no type or storage class
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:929: error: syntax error before "RT0"
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:929: warning: type defaults to `int' in declaration of `RT0'
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:929: warning: data definition has no type or storage class
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:933: error: syntax error before "RT1"
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:933: warning: type defaults to `int' in declaration of `RT1'
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:933: warning: data definition has no type or storage class
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:937: error: syntax error before "RT2"
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:937: warning: type defaults to `int' in declaration of `RT2'
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:937: warning: data definition has no type or storage class
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:941: error: syntax error before "RT3"
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:941: warning: type defaults to `int' in declaration of `RT3'
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:941: warning: data definition has no type or storage class
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:948: error: syntax error before "RCON"
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:948: warning: type defaults to `int' in declaration of `RCON'
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:953: warning: data definition has no type or storage class
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:959: error: syntax error before "KT0"
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:959: warning: type defaults to `int' in declaration of `KT0'
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:959: warning: data definition has no type or storage class
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:960: error: syntax error before "KT1"
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:960: warning: type defaults to `int' in declaration of `KT1'
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:960: warning: data definition has no type or storage class
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:961: error: syntax error before "KT2"
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:961: warning: type defaults to `int' in declaration of `KT2'
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:961: warning: data definition has no type or storage class
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:962: error: syntax error before "KT3"
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:962: warning: type defaults to `int' in declaration of `KT3'
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:962: warning: data definition has no type or storage class
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:984: error: syntax error before '*' token
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:985: warning: function declaration isn't a prototype
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c: In function `rtmp_aes_set_key':
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:987: error: `uint32' undeclared (first use in this function)
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:987: error: `RK' undeclared (first use in this function)
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:987: error: `SK' undeclared (first use in this function)
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:987: warning: left-hand operand of comma expression has no effect
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:989: error: `nbits' undeclared (first use in this function)
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:991: error: `ctx' undeclared (first use in this function)
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:1001: error: `key' undeclared (first use in this function)
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:1013: error: `uint8' undeclared (first use in this function)
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c: At top level:
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:1128: error: syntax error before '*' token
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:1129: warning: function declaration isn't a prototype
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c: In function `rtmp_aes_encrypt':
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:1130: error: `uint32' undeclared (first use in this function)
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:1130: error: `RK' undeclared (first use in this function)
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:1130: error: `X0' undeclared (first use in this function)
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:1130: error: `X1' undeclared (first use in this function)
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:1130: error: `X2' undeclared (first use in this function)
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:1130: error: `X3' undeclared (first use in this function)
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:1130: error: `Y0' undeclared (first use in this function)
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:1130: error: `Y1' undeclared (first use in this function)
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:1130: error: `Y2' undeclared (first use in this function)
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:1130: error: `Y3' undeclared (first use in this function)
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:1130: warning: left-hand operand of comma expression has no effect
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:1130: warning: left-hand operand of comma expression has no effect
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:1130: warning: left-hand operand of comma expression has no effect
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:1130: warning: left-hand operand of comma expression has no effect
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:1130: warning: left-hand operand of comma expression has no effect
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:1130: warning: left-hand operand of comma expression has no effect
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:1130: warning: left-hand operand of comma expression has no effect
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:1130: warning: left-hand operand of comma expression has no effect
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:1132: error: `ctx' undeclared (first use in this function)
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:1133: error: `input' undeclared (first use in this function)
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:1163: error: `uint8' undeclared (first use in this function)
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:1209: error: `output' undeclared (first use in this function)
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c: At top level:
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:1217: error: syntax error before '*' token
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:1218: warning: function declaration isn't a prototype
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c: In function `rtmp_aes_decrypt':
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:1219: error: `uint32' undeclared (first use in this function)
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:1219: error: `RK' undeclared (first use in this function)
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:1219: error: `X0' undeclared (first use in this function)
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:1219: error: `X1' undeclared (first use in this function)
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:1219: error: `X2' undeclared (first use in this function)
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:1219: error: `X3' undeclared (first use in this function)
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:1219: error: `Y0' undeclared (first use in this function)
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:1219: error: `Y1' undeclared (first use in this function)
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:1219: error: `Y2' undeclared (first use in this function)
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:1219: error: `Y3' undeclared (first use in this function)
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:1219: warning: left-hand operand of comma expression has no effect
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:1219: warning: left-hand operand of comma expression has no effect
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:1219: warning: left-hand operand of comma expression has no effect
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:1219: warning: left-hand operand of comma expression has no effect
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:1219: warning: left-hand operand of comma expression has no effect
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:1219: warning: left-hand operand of comma expression has no effect
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:1219: warning: left-hand operand of comma expression has no effect
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:1219: warning: left-hand operand of comma expression has no effect
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:1221: error: `ctx' undeclared (first use in this function)
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:1223: error: `input' undeclared (first use in this function)
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:1253: error: `uint8' undeclared (first use in this function)
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:1299: error: `output' undeclared (first use in this function)
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c: At top level:
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:1319: error: syntax error before "HMAC_SHA1"
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:1320: error: syntax error before "UCHAR"
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:1325: warning: return type defaults to `int'
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:1325: warning: function declaration isn't a prototype
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c: In function `HMAC_SHA1':
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:1326: error: `SHA_CTX' undeclared (first use in this function)
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:1326: error: syntax error before "context"
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:1327: error: `UCHAR' undeclared (first use in this function)
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:1329: error: `INT' undeclared (first use in this function)
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:1332: error: `key_len' undeclared (first use in this function)
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:1334: error: syntax error before "tctx"
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:1335: error: `tctx' undeclared (first use in this function)
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:1336: error: `key' undeclared (first use in this function)
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:1340: error: `k_ipad' undeclared (first use in this function)
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:1341: error: `k_opad' undeclared (first use in this function)
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:1353: error: `context' undeclared (first use in this function)
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:1355: error: `text' undeclared (first use in this function)
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:1355: error: `text_len' undeclared (first use in this function)
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:1356: error: `digest' undeclared (first use in this function)
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c: In function `F':
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:1375: error: `SHA_DIGEST_LEN' undeclared (first use in this function)
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:1379: error: implicit declaration of function `memcpy'
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:1384: error: implicit declaration of function `strlen'
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:1375: warning: unused variable `digest1'
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c: In function `PasswordHash':
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:1414: error: `SHA_DIGEST_LEN' undeclared (first use in this function)
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c: In function `rtmp_aes_set_key':
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:987: warning: statement with no effect
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:1010: warning: value computed is not used
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:1026: warning: value computed is not used
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:1044: warning: value computed is not used
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c: In function `rtmp_aes_encrypt':
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:1130: warning: statement with no effect
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c: In function `rtmp_aes_decrypt':
+/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.c:1219: warning: statement with no effect
+make[2]: *** [/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux/../../common/md5.o] Error 1
+make[1]: *** [_module_/mnt/hda2/projects/SSD1933/emlinux-ssd1933/BSP/non_oss/ralink/RT3070_Linux_STA_v2.0.1.0/os/linux] Error 2
+make[1]: Leaving directory `/mnt/hda2/projects/SSD1933/emlinux-ssd1933/linux-2.6.24-ssl'
+make: *** [LINUX] Error 2

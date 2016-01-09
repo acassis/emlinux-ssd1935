@@ -1,0 +1,124 @@
+libpng12_la-pngrutil.lo libpng12_la-pngrutil.o: ../pngrutil.c ../png.h \
+  ../../include/zlib.h ../../include/zconf.h \
+  /opt/toolchain_arm_ep93xx/lib/gcc/arm-linux-uclibc/3.4.2/../../../../arm-linux-uclibc/sys-include/sys/types.h \
+  /opt/toolchain_arm_ep93xx/lib/gcc/arm-linux-uclibc/3.4.2/../../../../arm-linux-uclibc/sys-include/features.h \
+  /opt/toolchain_arm_ep93xx/lib/gcc/arm-linux-uclibc/3.4.2/../../../../arm-linux-uclibc/sys-include/bits/uClibc_config.h \
+  /opt/toolchain_arm_ep93xx/lib/gcc/arm-linux-uclibc/3.4.2/../../../../arm-linux-uclibc/sys-include/sys/cdefs.h \
+  /opt/toolchain_arm_ep93xx/lib/gcc/arm-linux-uclibc/3.4.2/../../../../arm-linux-uclibc/sys-include/bits/types.h \
+  /opt/toolchain_arm_ep93xx/lib/gcc/arm-linux-uclibc/3.4.2/include/stddef.h \
+  /opt/toolchain_arm_ep93xx/lib/gcc/arm-linux-uclibc/3.4.2/../../../../arm-linux-uclibc/sys-include/bits/kernel_types.h \
+  /opt/toolchain_arm_ep93xx/lib/gcc/arm-linux-uclibc/3.4.2/../../../../arm-linux-uclibc/sys-include/bits/pthreadtypes.h \
+  /opt/toolchain_arm_ep93xx/lib/gcc/arm-linux-uclibc/3.4.2/../../../../arm-linux-uclibc/sys-include/bits/sched.h \
+  /opt/toolchain_arm_ep93xx/lib/gcc/arm-linux-uclibc/3.4.2/../../../../arm-linux-uclibc/sys-include/time.h \
+  /opt/toolchain_arm_ep93xx/lib/gcc/arm-linux-uclibc/3.4.2/../../../../arm-linux-uclibc/sys-include/endian.h \
+  /opt/toolchain_arm_ep93xx/lib/gcc/arm-linux-uclibc/3.4.2/../../../../arm-linux-uclibc/sys-include/bits/endian.h \
+  /opt/toolchain_arm_ep93xx/lib/gcc/arm-linux-uclibc/3.4.2/../../../../arm-linux-uclibc/sys-include/sys/select.h \
+  /opt/toolchain_arm_ep93xx/lib/gcc/arm-linux-uclibc/3.4.2/../../../../arm-linux-uclibc/sys-include/bits/select.h \
+  /opt/toolchain_arm_ep93xx/lib/gcc/arm-linux-uclibc/3.4.2/../../../../arm-linux-uclibc/sys-include/bits/sigset.h \
+  /opt/toolchain_arm_ep93xx/lib/gcc/arm-linux-uclibc/3.4.2/../../../../arm-linux-uclibc/sys-include/bits/time.h \
+  /opt/toolchain_arm_ep93xx/lib/gcc/arm-linux-uclibc/3.4.2/../../../../arm-linux-uclibc/sys-include/sys/sysmacros.h \
+  /opt/toolchain_arm_ep93xx/lib/gcc/arm-linux-uclibc/3.4.2/../../../../arm-linux-uclibc/sys-include/unistd.h \
+  /opt/toolchain_arm_ep93xx/lib/gcc/arm-linux-uclibc/3.4.2/../../../../arm-linux-uclibc/sys-include/bits/posix_opt.h \
+  /opt/toolchain_arm_ep93xx/lib/gcc/arm-linux-uclibc/3.4.2/../../../../arm-linux-uclibc/sys-include/bits/confname.h \
+  /opt/toolchain_arm_ep93xx/lib/gcc/arm-linux-uclibc/3.4.2/../../../../arm-linux-uclibc/sys-include/bits/getopt.h \
+  ../pngconf.h ./config.h \
+  /opt/toolchain_arm_ep93xx/lib/gcc/arm-linux-uclibc/3.4.2/../../../../arm-linux-uclibc/sys-include/stdio.h \
+  /opt/toolchain_arm_ep93xx/lib/gcc/arm-linux-uclibc/3.4.2/../../../../arm-linux-uclibc/sys-include/bits/uClibc_stdio.h \
+  /opt/toolchain_arm_ep93xx/lib/gcc/arm-linux-uclibc/3.4.2/../../../../arm-linux-uclibc/sys-include/wchar.h \
+  /opt/toolchain_arm_ep93xx/lib/gcc/arm-linux-uclibc/3.4.2/../../../../arm-linux-uclibc/sys-include/bits/wchar.h \
+  /opt/toolchain_arm_ep93xx/lib/gcc/arm-linux-uclibc/3.4.2/include/stdarg.h \
+  /opt/toolchain_arm_ep93xx/lib/gcc/arm-linux-uclibc/3.4.2/../../../../arm-linux-uclibc/sys-include/bits/stdio_lim.h \
+  /opt/toolchain_arm_ep93xx/lib/gcc/arm-linux-uclibc/3.4.2/../../../../arm-linux-uclibc/sys-include/setjmp.h \
+  /opt/toolchain_arm_ep93xx/lib/gcc/arm-linux-uclibc/3.4.2/../../../../arm-linux-uclibc/sys-include/bits/setjmp.h \
+  /opt/toolchain_arm_ep93xx/lib/gcc/arm-linux-uclibc/3.4.2/../../../../arm-linux-uclibc/sys-include/string.h \
+  /opt/toolchain_arm_ep93xx/lib/gcc/arm-linux-uclibc/3.4.2/../../../../arm-linux-uclibc/sys-include/stdlib.h \
+  /opt/toolchain_arm_ep93xx/lib/gcc/arm-linux-uclibc/3.4.2/../../../../arm-linux-uclibc/sys-include/alloca.h \
+  /opt/toolchain_arm_ep93xx/lib/gcc/arm-linux-uclibc/3.4.2/../../../../arm-linux-uclibc/sys-include/math.h \
+  /opt/toolchain_arm_ep93xx/lib/gcc/arm-linux-uclibc/3.4.2/../../../../arm-linux-uclibc/sys-include/bits/huge_val.h \
+  /opt/toolchain_arm_ep93xx/lib/gcc/arm-linux-uclibc/3.4.2/../../../../arm-linux-uclibc/sys-include/bits/mathdef.h \
+  /opt/toolchain_arm_ep93xx/lib/gcc/arm-linux-uclibc/3.4.2/../../../../arm-linux-uclibc/sys-include/bits/mathcalls.h \
+  /opt/toolchain_arm_ep93xx/lib/gcc/arm-linux-uclibc/3.4.2/../../../../arm-linux-uclibc/sys-include/bits/uClibc_clk_tck.h
+
+../png.h:
+
+../../include/zlib.h:
+
+../../include/zconf.h:
+
+/opt/toolchain_arm_ep93xx/lib/gcc/arm-linux-uclibc/3.4.2/../../../../arm-linux-uclibc/sys-include/sys/types.h:
+
+/opt/toolchain_arm_ep93xx/lib/gcc/arm-linux-uclibc/3.4.2/../../../../arm-linux-uclibc/sys-include/features.h:
+
+/opt/toolchain_arm_ep93xx/lib/gcc/arm-linux-uclibc/3.4.2/../../../../arm-linux-uclibc/sys-include/bits/uClibc_config.h:
+
+/opt/toolchain_arm_ep93xx/lib/gcc/arm-linux-uclibc/3.4.2/../../../../arm-linux-uclibc/sys-include/sys/cdefs.h:
+
+/opt/toolchain_arm_ep93xx/lib/gcc/arm-linux-uclibc/3.4.2/../../../../arm-linux-uclibc/sys-include/bits/types.h:
+
+/opt/toolchain_arm_ep93xx/lib/gcc/arm-linux-uclibc/3.4.2/include/stddef.h:
+
+/opt/toolchain_arm_ep93xx/lib/gcc/arm-linux-uclibc/3.4.2/../../../../arm-linux-uclibc/sys-include/bits/kernel_types.h:
+
+/opt/toolchain_arm_ep93xx/lib/gcc/arm-linux-uclibc/3.4.2/../../../../arm-linux-uclibc/sys-include/bits/pthreadtypes.h:
+
+/opt/toolchain_arm_ep93xx/lib/gcc/arm-linux-uclibc/3.4.2/../../../../arm-linux-uclibc/sys-include/bits/sched.h:
+
+/opt/toolchain_arm_ep93xx/lib/gcc/arm-linux-uclibc/3.4.2/../../../../arm-linux-uclibc/sys-include/time.h:
+
+/opt/toolchain_arm_ep93xx/lib/gcc/arm-linux-uclibc/3.4.2/../../../../arm-linux-uclibc/sys-include/endian.h:
+
+/opt/toolchain_arm_ep93xx/lib/gcc/arm-linux-uclibc/3.4.2/../../../../arm-linux-uclibc/sys-include/bits/endian.h:
+
+/opt/toolchain_arm_ep93xx/lib/gcc/arm-linux-uclibc/3.4.2/../../../../arm-linux-uclibc/sys-include/sys/select.h:
+
+/opt/toolchain_arm_ep93xx/lib/gcc/arm-linux-uclibc/3.4.2/../../../../arm-linux-uclibc/sys-include/bits/select.h:
+
+/opt/toolchain_arm_ep93xx/lib/gcc/arm-linux-uclibc/3.4.2/../../../../arm-linux-uclibc/sys-include/bits/sigset.h:
+
+/opt/toolchain_arm_ep93xx/lib/gcc/arm-linux-uclibc/3.4.2/../../../../arm-linux-uclibc/sys-include/bits/time.h:
+
+/opt/toolchain_arm_ep93xx/lib/gcc/arm-linux-uclibc/3.4.2/../../../../arm-linux-uclibc/sys-include/sys/sysmacros.h:
+
+/opt/toolchain_arm_ep93xx/lib/gcc/arm-linux-uclibc/3.4.2/../../../../arm-linux-uclibc/sys-include/unistd.h:
+
+/opt/toolchain_arm_ep93xx/lib/gcc/arm-linux-uclibc/3.4.2/../../../../arm-linux-uclibc/sys-include/bits/posix_opt.h:
+
+/opt/toolchain_arm_ep93xx/lib/gcc/arm-linux-uclibc/3.4.2/../../../../arm-linux-uclibc/sys-include/bits/confname.h:
+
+/opt/toolchain_arm_ep93xx/lib/gcc/arm-linux-uclibc/3.4.2/../../../../arm-linux-uclibc/sys-include/bits/getopt.h:
+
+../pngconf.h:
+
+./config.h:
+
+/opt/toolchain_arm_ep93xx/lib/gcc/arm-linux-uclibc/3.4.2/../../../../arm-linux-uclibc/sys-include/stdio.h:
+
+/opt/toolchain_arm_ep93xx/lib/gcc/arm-linux-uclibc/3.4.2/../../../../arm-linux-uclibc/sys-include/bits/uClibc_stdio.h:
+
+/opt/toolchain_arm_ep93xx/lib/gcc/arm-linux-uclibc/3.4.2/../../../../arm-linux-uclibc/sys-include/wchar.h:
+
+/opt/toolchain_arm_ep93xx/lib/gcc/arm-linux-uclibc/3.4.2/../../../../arm-linux-uclibc/sys-include/bits/wchar.h:
+
+/opt/toolchain_arm_ep93xx/lib/gcc/arm-linux-uclibc/3.4.2/include/stdarg.h:
+
+/opt/toolchain_arm_ep93xx/lib/gcc/arm-linux-uclibc/3.4.2/../../../../arm-linux-uclibc/sys-include/bits/stdio_lim.h:
+
+/opt/toolchain_arm_ep93xx/lib/gcc/arm-linux-uclibc/3.4.2/../../../../arm-linux-uclibc/sys-include/setjmp.h:
+
+/opt/toolchain_arm_ep93xx/lib/gcc/arm-linux-uclibc/3.4.2/../../../../arm-linux-uclibc/sys-include/bits/setjmp.h:
+
+/opt/toolchain_arm_ep93xx/lib/gcc/arm-linux-uclibc/3.4.2/../../../../arm-linux-uclibc/sys-include/string.h:
+
+/opt/toolchain_arm_ep93xx/lib/gcc/arm-linux-uclibc/3.4.2/../../../../arm-linux-uclibc/sys-include/stdlib.h:
+
+/opt/toolchain_arm_ep93xx/lib/gcc/arm-linux-uclibc/3.4.2/../../../../arm-linux-uclibc/sys-include/alloca.h:
+
+/opt/toolchain_arm_ep93xx/lib/gcc/arm-linux-uclibc/3.4.2/../../../../arm-linux-uclibc/sys-include/math.h:
+
+/opt/toolchain_arm_ep93xx/lib/gcc/arm-linux-uclibc/3.4.2/../../../../arm-linux-uclibc/sys-include/bits/huge_val.h:
+
+/opt/toolchain_arm_ep93xx/lib/gcc/arm-linux-uclibc/3.4.2/../../../../arm-linux-uclibc/sys-include/bits/mathdef.h:
+
+/opt/toolchain_arm_ep93xx/lib/gcc/arm-linux-uclibc/3.4.2/../../../../arm-linux-uclibc/sys-include/bits/mathcalls.h:
+
+/opt/toolchain_arm_ep93xx/lib/gcc/arm-linux-uclibc/3.4.2/../../../../arm-linux-uclibc/sys-include/bits/uClibc_clk_tck.h:

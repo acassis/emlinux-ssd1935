@@ -1,0 +1,151 @@
+#ifndef __PLATFORM_H__
+#define __PLATFORM_H__
+
+#define PF_APHRODITE	1
+#define PF_ARTEMIS	2
+
+#define OS_NONE		0
+#define OS_LINUX	1
+
+#if (PLATFORM == PF_APHRODITE)
+// Slave Port 0
+#define BOOTROM		0
+#define ABB1_BASE	0x08000000
+#define ABB2_BASE	0x08100000
+#define SDHC1_BASE	0x08200000
+#define SDHC2_BASE	0x08300000
+#define USB_BASE	0x08400000
+
+// Slave Port 1
+#define EXPIO_CS0_BASE	0x10000000	// 128MB
+#define EXPIO_CS1_BASE	0x20000000	// 64MB
+#define EXPIO_CS2_BASE	0x24000000	// 64MB
+#define EXPIO_CS3_BASE	0x28000000	// 64MB
+#define EXPIO_CS4_BASE	0x2C000000	// 32MB
+#define EXPIO_CS5_BASE	0x2E000000	// 32MB
+
+#define NFC_BASE	0x40000000
+#define NFC_BUF_BASE	(NFC_BASE + 0x1000)
+#define NFC_BUF_SIZE	0x1000		// 4KB
+
+// Slave Port 2
+#define SDR_CSD0_BASE	0x50000000
+#define SDR_CSD1_BASE	0x90000000
+#define SDR_SIZE	0x04000000	// 64MB
+
+// Slave Port 3
+#define XS1200_BASE	0xD0000000
+
+// Slave Port 4
+#define MEMC_BASE	0xFFFF0000
+
+#elif (PLATFORM == PF_ARTEMIS)
+#define ABB1_BASE	0xD0000000
+#define ABB2_BASE	0xD0100000
+#define SDHC1_BASE	0xD0200000
+#define SDHC2_BASE	0xD0300000
+#define USB_BASE	0xD0400000
+
+// Slave Port 1
+#define EXPIO_CS0_BASE	0xD8000000	// 32MB
+#define EXPIO_CS1_BASE	0xDA000000	// 8MB
+#define EXPIO_CS2_BASE	0xDA800000	// 8MB
+#define EXPIO_CS3_BASE	0xDB000000	// 8MB
+#define EXPIO_CS4_BASE	0xDB800000	// 4MB
+#define EXPIO_CS5_BASE	0xDBC00000	// 4MB
+
+#define NFC_BASE	0xDC000000
+#define NFC_BUF_BASE	(NFC_BASE + 0x1000)
+#define NFC_BUF_SIZE	0x1000		// 4KB
+
+// Slave Port 2
+#define SDR_CSD0_BASE	0xE0000000	
+#define SDR_CSD1_BASE	0xE4000000	
+#define SDR_SIZE	0x02000000	// 32MB
+
+// Slave Port 3
+#define XS1200_BASE	0xE8000000
+
+// Slave Port 4
+#define MEMC_BASE	0xFFFF0000	// 64KB
+
+#else
+#error	"Platform selection is wrong"
+#endif
+
+// USB Sub addresses
+#define USBD_BASE	(USB_BASE + 0x0000)
+#define USB_BUF0_BASE	(USB_BASE + 0x1000)
+#define USB_BUF1_BASE	(USB_BASE + 0x2000)
+#define USBH_BASE	(USB_BASE + 0x3000)
+#define USBOTG_BASE	(USB_BASE + 0x4000)
+
+
+// abb1
+#define SDR_BASE	(ABB1_BASE + 0x0000)
+#define EXPIO_BASE	(ABB1_BASE + 0x1000)
+#define EBM_BASE	(ABB1_BASE + 0x2000)
+#define DMAC_BASE	(ABB1_BASE + 0x3000)
+#define D2D_BASE	(ABB1_BASE + 0x4000)
+#define LCDC_BASE	(ABB1_BASE + 0x5000)
+#define DV_BASE		(ABB1_BASE + 0x6000)
+#define VIP_BASE	(ABB1_BASE + 0x7000)
+#define VPP_BASE	(ABB1_BASE + 0x8000)
+#define TVOUT_BASE	(ABB1_BASE + 0x9000)
+#define TVENC_BASE	(ABB1_BASE + 0xA000)
+#define PRISM_BASE	(ABB1_BASE + 0xB000)
+#define TSI_BASE	(ABB1_BASE + 0xC000)
+
+// abb2 
+#define SCRM_BASE	(ABB2_BASE + 0x0000)
+#define INTC_BASE	(ABB2_BASE + 0x1000)
+#define I2C_BASE	(ABB2_BASE + 0x2000)
+#define UART1_BASE	(ABB2_BASE + 0x3000)
+#define UART2_BASE	(ABB2_BASE + 0x4000)
+#define UART3_BASE	(ABB2_BASE + 0x5000)
+#define UART4_BASE	(ABB2_BASE + 0x6000)
+#define SPI1_BASE	(ABB2_BASE + 0x7000)
+#define SPI2_BASE	(ABB2_BASE + 0x8000)
+#define GPT1_BASE	(ABB2_BASE + 0x9000)
+#define GPT2_BASE	(ABB2_BASE + 0xA000)
+#define RTC_BASE	(ABB2_BASE + 0xB000)
+#define WDT_BASE	(ABB2_BASE + 0xC000)
+#define PWM1_BASE	(ABB2_BASE + 0xD000)
+#define PWM2_BASE	(ABB2_BASE + 0xE000)
+#define GPIO_BASE	(ABB2_BASE + 0xF000)
+#define KPP_BASE	(ABB2_BASE + 0x10000)
+
+// IRQ List
+#define DSP_IRQ		0
+#define LCDC_IRQ	1
+#define TVOUT_IRQ	2
+#define MIPI_IRQ	3
+#define VPP_IRQ		4
+#define VIP_IRQ		6
+#define D2D_IRQ		7
+#define USBD_IRQ	8
+#define DMAC_IRQ	9
+#define MIPI_TER_IRQ	10
+#define SDHC1_IRQ	11
+#define SDHC2_IRQ	12
+#define NANDFC_IRQ	13
+#define USBH_IRQ	14
+#define USBOTG_IRQ	15
+#define UART1_IRQ	16
+#define UART2_IRQ	17
+#define UART3_IRQ	18
+#define UART4_IRQ	19
+#define SPI1_IRQ	20
+#define SPI2_IRQ	21
+#define RSVD1_IRQ	22
+#define RSVD2_IRQ	23
+#define GPT1_IRQ	24
+#define GPT2_IRQ	25
+#define I2C_IRQ		26
+#define WDT_IRQ		27
+#define RTC_IRQ		28
+#define GPIO_IRQ	29
+#define KPP_IRQ		30
+#define TSI_IRQ		31
+
+#endif	// __PLATFORM_H__

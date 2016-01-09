@@ -1,0 +1,45 @@
+#!/bin/sh
+mdev
+
+case ${1} in
+block)
+	case $ACTION in
+	add)
+		/usr/sbin/usbdisk attach ${DEVPATH} ${MAJOR} ${MINOR} 
+		;;
+	remove)
+		/usr/sbin/usbdisk detach ${DEVPATH} ${MAJOR} ${MINOR} 
+		;;
+	*)
+		;;
+	esac
+	;;
+net)
+	if [ "a${ACTION}" = "aadd" ] ; then
+	if [ "a${PHYSDEVBUS}" = "ausb" -a "a${INTERFACE}" = "aeth0" ] ; then
+	## a USB LAN device plugged in
+		/sbin/ifconfig ${INTERFACE} 192.168.1.211
+		/sbin/telnetd
+		exit 0
+	fi
+	fi
+	;;
+tty)
+	case ${ACTION} in
+	add)
+		if [ "a${PHYSDEVBUS}" = "ausb-serial" -a "a${MAJOR}" = "a188" ] ; then
+			echo "Start TestServer..." >> /tmp/hotplug_env
+			LD_LIBRARY_PATH=/emlx-app/lib /emlx-app/bin/TestServer &
+		fi
+		;;
+	remove)
+		echo "Kill TestServer" >> /tmp/hotplug_env
+		killall -9 TestServer
+		;;
+	esac
+	;;
+*)
+	;;
+esac
+
+exit 0

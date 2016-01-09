@@ -1,0 +1,17 @@
+#!/bin/sh
+mdev
+if [ ! "a$1" = "ablock" ]; then
+## only handle block device events
+exit 0
+fi
+
+case $ACTION in
+	add)
+		/usr/sbin/usbdisk attach ${DEVPATH} ${MAJOR} ${MINOR} 
+		;;
+	remove)
+		/usr/sbin/usbdisk detach ${DEVPATH} ${MAJOR} ${MINOR} 
+		;;
+	*)
+		;;
+esac

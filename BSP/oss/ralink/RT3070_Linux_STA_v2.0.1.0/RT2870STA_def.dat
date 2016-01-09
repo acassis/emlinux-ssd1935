@@ -1,0 +1,6 @@
+#The word of "Default" must not be removed
+Default
+WirelessMode=5
+Channel=0
+CarrierDetect=0
+AntDiversity=0

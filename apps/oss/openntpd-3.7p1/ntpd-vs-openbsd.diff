@@ -1,0 +1,311 @@
+diff -x CVS -x Makefile -ru /usr/src/usr.sbin/ntpd/buffer.c ./buffer.c
+--- /usr/src/usr.sbin/ntpd/buffer.c	Mon May 23 08:18:35 2005
++++ ./buffer.c	Sun Mar 13 23:33:57 2005
+@@ -16,6 +16,8 @@
+  * OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+  */
+ 
++#include "includes.h"
++
+ #include <sys/types.h>
+ #include <sys/uio.h>
+ 
+diff -x CVS -x Makefile -ru /usr/src/usr.sbin/ntpd/config.c ./config.c
+--- /usr/src/usr.sbin/ntpd/config.c	Mon May 23 08:18:35 2005
++++ ./config.c	Sun Mar 13 23:41:06 2005
+@@ -16,6 +16,8 @@
+  * OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+  */
+ 
++#include "includes.h"
++
+ #include <sys/types.h>
+ #include <sys/socket.h>
+ #include <sys/stat.h>
+@@ -73,7 +75,9 @@
+ 	if ((h = calloc(1, sizeof(struct ntp_addr))) == NULL)
+ 		fatal(NULL);
+ 	sa_in = (struct sockaddr_in *)&h->ss;
++#ifdef HAVE_STRUCT_SOCKADDR_IN_SIN_LEN
+ 	sa_in->sin_len = sizeof(struct sockaddr_in);
++#endif
+ 	sa_in->sin_family = AF_INET;
+ 	sa_in->sin_addr.s_addr = ina.s_addr;
+ 
+@@ -95,13 +99,17 @@
+ 		if ((h = calloc(1, sizeof(struct ntp_addr))) == NULL)
+ 			fatal(NULL);
+ 		sa_in6 = (struct sockaddr_in6 *)&h->ss;
++#ifdef HAVE_STRUCT_SOCKADDR_IN6_SIN6_LEN
+ 		sa_in6->sin6_len = sizeof(struct sockaddr_in6);
++#endif
+ 		sa_in6->sin6_family = AF_INET6;
+ 		memcpy(&sa_in6->sin6_addr,
+ 		    &((struct sockaddr_in6 *)res->ai_addr)->sin6_addr,
+ 		    sizeof(sa_in6->sin6_addr));
++#ifdef HAVE_STRUCT_SOCKADDR_IN6_SIN6_SCOPE_ID
+ 		sa_in6->sin6_scope_id =
+ 		    ((struct sockaddr_in6 *)res->ai_addr)->sin6_scope_id;
++#endif
+ 
+ 		freeaddrinfo(res);
+ 	}
+@@ -139,12 +147,16 @@
+ 		h->ss.ss_family = res->ai_family;
+ 		if (res->ai_family == AF_INET) {
+ 			sa_in = (struct sockaddr_in *)&h->ss;
++#ifdef HAVE_STRUCT_SOCKADDR_IN_SIN_LEN
+ 			sa_in->sin_len = sizeof(struct sockaddr_in);
++#endif
+ 			sa_in->sin_addr.s_addr = ((struct sockaddr_in *)
+ 			    res->ai_addr)->sin_addr.s_addr;
+ 		} else {
+ 			sa_in6 = (struct sockaddr_in6 *)&h->ss;
++#ifdef HAVE_STRUCT_SOCKADDR_IN6_SIN6_LEN
+ 			sa_in6->sin6_len = sizeof(struct sockaddr_in6);
++#endif
+ 			memcpy(&sa_in6->sin6_addr, &((struct sockaddr_in6 *)
+ 			    res->ai_addr)->sin6_addr, sizeof(struct in6_addr));
+ 		}
+diff -x CVS -x Makefile -ru /usr/src/usr.sbin/ntpd/log.c ./log.c
+--- /usr/src/usr.sbin/ntpd/log.c	Mon May 23 08:18:36 2005
++++ ./log.c	Sun Dec 12 17:22:30 2004
+@@ -16,6 +16,8 @@
+  * OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+  */
+ 
++#include "includes.h"
++
+ #include <sys/types.h>
+ #include <sys/socket.h>
+ #include <netinet/in.h>
+diff -x CVS -x Makefile -ru /usr/src/usr.sbin/ntpd/ntp.c ./ntp.c
+--- /usr/src/usr.sbin/ntpd/ntp.c	Mon May 23 08:18:36 2005
++++ ./ntp.c	Sun Mar 13 23:38:33 2005
+@@ -17,13 +17,19 @@
+  * OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+  */
+ 
++#include "includes.h"
++
+ #include <sys/param.h>
+ #include <sys/time.h>
+ #include <sys/stat.h>
+ #include <errno.h>
+ #include <fcntl.h>
+-#include <paths.h>
+-#include <poll.h>
++#ifdef HAVE_PATHS_H
++# include <paths.h>
++#endif
++#ifdef HAVE_POLL_H
++# include <poll.h>
++#endif
+ #include <pwd.h>
+ #include <signal.h>
+ #include <stdlib.h>
+@@ -118,8 +124,7 @@
+ 	setup_listeners(se, conf, &listener_cnt);
+ 
+ 	if (setgroups(1, &pw->pw_gid) ||
+-	    setegid(pw->pw_gid) || setgid(pw->pw_gid) ||
+-	    seteuid(pw->pw_uid) || setuid(pw->pw_uid))
++	    !permanently_set_uid(pw))
+ 		fatal("can't drop privileges");
+ 
+ 	endpwent();
+diff -x CVS -x Makefile -ru /usr/src/usr.sbin/ntpd/ntp.h ./ntp.h
+--- /usr/src/usr.sbin/ntpd/ntp.h	Mon Dec 13 23:22:52 2004
++++ ./ntp.h	Tue Dec 14 12:22:14 2004
+@@ -20,6 +20,8 @@
+ #ifndef _NTP_H_
+ #define _NTP_H_
+ 
++#include "includes.h"
++
+ /* Style borrowed from NTP ref/tcpdump and updated for SNTPv4 (RFC2030). */
+ 
+ /*
+diff -x CVS -x Makefile -ru /usr/src/usr.sbin/ntpd/ntpd.8 ./ntpd.8
+--- /usr/src/usr.sbin/ntpd/ntpd.8	Fri Dec 10 14:54:18 2004
++++ ./ntpd.8	Tue Dec 14 12:20:35 2004
+@@ -53,20 +53,6 @@
+ .Xr adjtime 2
+ will be logged.
+ .Pp
+-.Nm
+-is usually started at boot time, and can be enabled by
+-setting the following in
+-.Pa /etc/rc.conf.local :
+-.Pp
+-.Dl ntpd_flags=\&"\&"
+-.Pp
+-See
+-.Xr rc 8
+-and
+-.Xr rc.conf 8
+-for more information on the boot process
+-and enabling daemons.
+-.Pp
+ When
+ .Nm
+ starts up, it reads settings from a configuration file,
+@@ -98,18 +84,6 @@
+ .Xr rdate 8
+ before starting
+ .Nm .
+-Currently, the
+-.Fl s
+-option is added unconditionally in
+-.Xr rc 8 .
+-Make sure to specify the
+-.Fl S
+-option
+-(add/edit
+-.Va ntpd_flags
+-in
+-.Xr rc.conf.local 8 )
+-if this behaviour is not desired.
+ .El
+ .Sh FILES
+ .Bl -tag -width "/etc/ntpd.confXXX" -compact
+@@ -122,8 +96,6 @@
+ .Xr date 1 ,
+ .Xr adjtime 2 ,
+ .Xr ntpd.conf 5 ,
+-.Xr rc 8 ,
+-.Xr rc.conf 8 ,
+ .Xr rdate 8 ,
+ .Xr timed 8
+ .Rs
+diff -x CVS -x Makefile -ru /usr/src/usr.sbin/ntpd/ntpd.c ./ntpd.c
+--- /usr/src/usr.sbin/ntpd/ntpd.c	Mon May 23 08:18:36 2005
++++ ./ntpd.c	Sun Mar 13 23:41:46 2005
+@@ -16,6 +16,10 @@
+  * OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+  */
+ 
++#include "includes.h"
++
++RCSID("$Release: OpenNTPD "OPENNTPD_VERSION" $");
++
+ #include <sys/types.h>
+ #include <sys/socket.h>
+ #include <sys/wait.h>
+@@ -23,7 +27,9 @@
+ #include <arpa/inet.h>
+ #include <errno.h>
+ #include <fcntl.h>
+-#include <poll.h>
++#ifdef HAVE_POLL_H
++# include <poll.h>
++#endif
+ #include <pwd.h>
+ #include <resolv.h>
+ #include <signal.h>
+@@ -85,7 +91,10 @@
+ 	const char		*conffile;
+ 	int			 ch, nfds, timeout = INFTIM;
+ 	int			 pipe_chld[2];
++	extern char		*__progname;
+ 
++	__progname = _compat_get_progname(argv[0]);
++
+ 	conffile = CONFFILE;
+ 
+ 	bzero(&conf, sizeof(conf));
+@@ -126,6 +135,10 @@
+ 		exit(1);
+ 	}
+ 	endpwent();
++
++#ifndef HAVE_ARC4RANDOM
++	seed_rng();
++#endif
+ 
+ 	if (!conf.settime) {
+ 		log_init(conf.debug);
+diff -x CVS -x Makefile -ru /usr/src/usr.sbin/ntpd/ntpd.h ./ntpd.h
+--- /usr/src/usr.sbin/ntpd/ntpd.h	Mon May 23 08:18:36 2005
++++ ./ntpd.h	Sun Mar 13 23:35:09 2005
+@@ -19,7 +19,7 @@
+ #include <sys/types.h>
+ #include <sys/uio.h>
+ #include <sys/socket.h>
+-#include <sys/queue.h>
++#include "openbsd-compat/sys-queue.h"
+ #include <sys/time.h>
+ #include <netinet/in.h>
+ #include <netinet/in_systm.h>
+@@ -30,8 +30,10 @@
+ 
+ #include "ntp.h"
+ 
++#ifndef NTPD_USER
+ #define	NTPD_USER	"_ntp"
+-#define	CONFFILE	"/etc/ntpd.conf"
++#endif
++#define	CONFFILE	SYSCONFDIR "/ntpd.conf"
+ 
+ #define	READ_BUF_SIZE		65535
+ 
+diff -x CVS -x Makefile -ru /usr/src/usr.sbin/ntpd/parse.y ./parse.y
+--- /usr/src/usr.sbin/ntpd/parse.y	Thu Nov 25 17:27:41 2004
++++ ./parse.y	Sun Dec 12 17:22:30 2004
+@@ -20,6 +20,8 @@
+  */
+ 
+ %{
++#include "includes.h"
++
+ #include <sys/types.h>
+ #include <sys/socket.h>
+ #include <netinet/in.h>
+diff -x CVS -x Makefile -ru /usr/src/usr.sbin/ntpd/server.c ./server.c
+--- /usr/src/usr.sbin/ntpd/server.c	Fri Jan 28 23:01:32 2005
++++ ./server.c	Sun Mar 13 23:32:13 2005
+@@ -17,10 +17,14 @@
+  * OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF THIS SOFTWARE.
+  */
+ 
++#include "includes.h"
++
+ #include <sys/types.h>
+ #include <sys/socket.h>
+ #include <errno.h>
+-#include <ifaddrs.h>
++#ifdef HAVE_IFADDRS_H
++# include <ifaddrs.h>
++#endif
+ #include <stdlib.h>
+ #include <string.h>
+ #include <unistd.h>
+@@ -32,12 +36,14 @@
+ setup_listeners(struct servent *se, struct ntpd_conf *conf, u_int *cnt)
+ {
+ 	struct listen_addr	*la;
+-	struct ifaddrs		*ifa, *ifap;
+-	struct sockaddr		*sa;
+ 	u_int			 new_cnt = 0;
+ 	int			 tos = IPTOS_LOWDELAY;
+ 
+ 	if (conf->listen_all) {
++#ifdef HAVE_GETIFADDRS
++		struct ifaddrs		*ifa, *ifap;
++		struct sockaddr		*sa;
++
+ 		if (getifaddrs(&ifa) == -1)
+ 			fatal("getifaddrs");
+ 
+@@ -57,6 +63,11 @@
+ 		}
+ 
+ 		freeifaddrs(ifa);
++#else
++		fprintf(stderr, "\"listen on *\" not supported on this "
++		    "platform, interface address required\n");
++		exit(1);
++#endif
+ 	}
+ 
+ 	TAILQ_FOREACH(la, &conf->listen_addrs, entry) {
